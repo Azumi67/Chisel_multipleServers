@@ -30,7 +30,7 @@
 
 - **دسترسی سریع به اسکریپت** >> **[کلیک]()**
 - **امکانات** >> **[کلیک](https://github.com/Azumi67/Chisel_multipleServers#%D8%A7%D9%85%DA%A9%D8%A7%D9%86%D8%A7%D8%AA)**
-- **آموزش** : 
+- **تک سرور** : 
 - **ریورس تانل - ایپی 4 - TCP - تک سرور** >> **[کلیک](https://github.com/Azumi67/Chisel_multipleServers#%D8%B1%DB%8C%D9%88%D8%B1%D8%B3-%D8%AA%D8%A7%D9%86%D9%84---%D8%A7%DB%8C%D9%BE%DB%8C-4---tcp---%D8%AA%DA%A9-%D8%B3%D8%B1%D9%88%D8%B1)**
 -  **ریورس تانل - ایپی 4 - UDP - تک سرور** >> **[کلیک](https://github.com/Azumi67/Chisel_multipleServers#%D8%B1%DB%8C%D9%88%D8%B1%D8%B3-%D8%AA%D8%A7%D9%86%D9%84---%D8%A7%DB%8C%D9%BE%DB%8C-4---udp---%D8%AA%DA%A9-%D8%B3%D8%B1%D9%88%D8%B1)**
 -  **ریورس تانل - ایپی 6 - TCP - تک سرور** >> **[کلیک](https://github.com/Azumi67/Chisel_multipleServers#%D8%B1%DB%8C%D9%88%D8%B1%D8%B3-%D8%AA%D8%A7%D9%86%D9%84---%D8%A7%DB%8C%D9%BE%DB%8C-6---tcp---%D8%AA%DA%A9-%D8%B3%D8%B1%D9%88%D8%B1)**

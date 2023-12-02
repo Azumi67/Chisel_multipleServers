@@ -1,4 +1,4 @@
-فردا اپدیت میشود.......
+شب اپدیت میشود.......
 
 ![R (2)](https://github.com/Azumi67/PrivateIP-Tunnel/assets/119934376/a064577c-9302-4f43-b3bf-3d4f84245a6f)
 نام پروژه : ریورس تانل Chisel - برقرای تانل بین چندین سرور با ایپی 4 و ایپی 6 
@@ -29,18 +29,27 @@
  ----------------------
 
 - **دسترسی سریع به اسکریپت** >> **[کلیک]()**
-- **امکانات** >> **[کلیک]()**
+- **امکانات** >> **[کلیک](https://github.com/Azumi67/Chisel_multipleServers#%D8%A7%D9%85%DA%A9%D8%A7%D9%86%D8%A7%D8%AA)**
 - **آموزش** : 
-- **تانل ** >> **[کلیک]()**
--  **تانل ** >> **[کلیک]()**
--  **تانل ** >> **[کلیک]()**
-- **تانل ** >>  **[کلیک]()**
-- **تانل **  >>  **[کلیک]()**
-- **تانل **  >>  **[کلیک]()**
-- **تانل **  >>  **[کلیک]()**
-- **تانل **  >>  **[کلیک]()**
-- **تانل  - TCP**  >>  **[کلیک]()**
-- **تانل **  >>  **[کلیک]()**
+- **ریورس تانل - ایپی 4 - TCP - تک سرور** >> **[کلیک](https://github.com/Azumi67/Chisel_multipleServers#%D8%B1%DB%8C%D9%88%D8%B1%D8%B3-%D8%AA%D8%A7%D9%86%D9%84---%D8%A7%DB%8C%D9%BE%DB%8C-4---tcp---%D8%AA%DA%A9-%D8%B3%D8%B1%D9%88%D8%B1)**
+-  **ریورس تانل - ایپی 4 - UDP - تک سرور** >> **[کلیک](https://github.com/Azumi67/Chisel_multipleServers#%D8%B1%DB%8C%D9%88%D8%B1%D8%B3-%D8%AA%D8%A7%D9%86%D9%84---%D8%A7%DB%8C%D9%BE%DB%8C-4---udp---%D8%AA%DA%A9-%D8%B3%D8%B1%D9%88%D8%B1)**
+-  **ریورس تانل - ایپی 6 - TCP - تک سرور** >> **[کلیک](https://github.com/Azumi67/Chisel_multipleServers#%D8%B1%DB%8C%D9%88%D8%B1%D8%B3-%D8%AA%D8%A7%D9%86%D9%84---%D8%A7%DB%8C%D9%BE%DB%8C-6---tcp---%D8%AA%DA%A9-%D8%B3%D8%B1%D9%88%D8%B1)**
+- **ریورس تانل - ایپی 6 - UDP - تک سرور** >>  **[کلیک](https://github.com/Azumi67/Chisel_multipleServers#%D8%B1%DB%8C%D9%88%D8%B1%D8%B3-%D8%AA%D8%A7%D9%86%D9%84---%D8%A7%DB%8C%D9%BE%DB%8C-6---udp---%D8%AA%DA%A9-%D8%B3%D8%B1%D9%88%D8%B1)**
+
+- **5 سرور خارج و یک سرور ایران :**
+- **ریورس تانل - ایپی 4 - TCP**  >>  **[کلیک](https://github.com/Azumi67/Chisel_multipleServers#%D8%B1%DB%8C%D9%88%D8%B1%D8%B3-%D8%AA%D8%A7%D9%86%D9%84---%D8%A7%DB%8C%D9%BE%DB%8C-4---tcp---%D9%BE%D9%86%DA%86-%D8%B3%D8%B1%D9%88%D8%B1-%D8%AE%D8%A7%D8%B1%D8%AC-%D9%88-%DB%8C%DA%A9-%D8%B3%D8%B1%D9%88%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86)**
+- **ریورس تانل - ایپی 4 - UDP**  >>  **[کلیک](https://github.com/Azumi67/Chisel_multipleServers#%D8%B1%DB%8C%D9%88%D8%B1%D8%B3-%D8%AA%D8%A7%D9%86%D9%84---%D8%A7%DB%8C%D9%BE%DB%8C-4---udp---%D9%BE%D9%86%DA%86-%D8%B3%D8%B1%D9%88%D8%B1-%D8%AE%D8%A7%D8%B1%D8%AC-%D9%88-%DB%8C%DA%A9-%D8%B3%D8%B1%D9%88%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86)**
+- **ریورس تانل - ایپی 6 - TCP**  >>  **[کلیک](https://github.com/Azumi67/Chisel_multipleServers#%D8%B1%DB%8C%D9%88%D8%B1%D8%B3-%D8%AA%D8%A7%D9%86%D9%84---%D8%A7%DB%8C%D9%BE%DB%8C-6---tcp---%D9%BE%D9%86%DA%86-%D8%B3%D8%B1%D9%88%D8%B1-%D8%AE%D8%A7%D8%B1%D8%AC-%D9%88-%DB%8C%DA%A9-%D8%B3%D8%B1%D9%88%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86)**
+- **ریورس تانل - ایپی 6 - UDP**  >>  **[کلیک](https://github.com/Azumi67/Chisel_multipleServers#%D8%B1%DB%8C%D9%88%D8%B1%D8%B3-%D8%AA%D8%A7%D9%86%D9%84---%D8%A7%DB%8C%D9%BE%DB%8C-6---udp---%D9%BE%D9%86%DA%86-%D8%B3%D8%B1%D9%88%D8%B1-%D8%AE%D8%A7%D8%B1%D8%AC-%D9%88-%DB%8C%DA%A9-%D8%B3%D8%B1%D9%88%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86)**
+
+- **5 سرور ایران و یک سرور خارج :**
+- **ریورس تانل - ایپی 4 - TCP**  >>  **[کلیک](https://github.com/Azumi67/Chisel_multipleServers#%D8%B1%DB%8C%D9%88%D8%B1%D8%B3-%D8%AA%D8%A7%D9%86%D9%84---%D8%A7%DB%8C%D9%BE%DB%8C-4---tcp--%D9%BE%D9%86%DA%86-%D8%B3%D8%B1%D9%88%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D9%88-%DB%8C%DA%A9-%D8%B3%D8%B1%D9%88%D8%B1-%D8%AE%D8%A7%D8%B1%D8%AC)**
+- **ریورس تانل - ایپی 6 - TCP**  >>  **[کلیک](https://github.com/Azumi67/Chisel_multipleServers#%D8%B1%DB%8C%D9%88%D8%B1%D8%B3-%D8%AA%D8%A7%D9%86%D9%84---%D8%A7%DB%8C%D9%BE%DB%8C-6---tcp--%D9%BE%D9%86%DA%86-%D8%B3%D8%B1%D9%88%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D9%88-%DB%8C%DA%A9-%D8%B3%D8%B1%D9%88%D8%B1-%D8%AE%D8%A7%D8%B1%D8%AC)**
+- **ریورس تانل - ایپی 4 - UDP**  >>  **[کلیک](https://github.com/Azumi67/Chisel_multipleServers#%D8%B1%DB%8C%D9%88%D8%B1%D8%B3-%D8%AA%D8%A7%D9%86%D9%84---%D8%A7%DB%8C%D9%BE%DB%8C-4---udp--%D9%BE%D9%86%DA%86-%D8%B3%D8%B1%D9%88%D8%B1-%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-%D9%88-%DB%8C%DA%A9-%D8%B3%D8%B1%D9%88%D8%B1-%D8%AE%D8%A7%D8%B1%D8%AC)**
+
+- **ریورس تانل با پرایوت ایپی :**
+- **ریورس تانل - ایپی پرایوت - TCP**  >>  **[کلیک](https://github.com/Azumi67/Chisel_multipleServers#%D8%B1%DB%8C%D9%88%D8%B1%D8%B3-%D8%AA%D8%A7%D9%86%D9%84---%D8%A7%DB%8C%D9%BE%DB%8C-%D9%BE%D8%B1%D8%A7%DB%8C%D9%88%D8%AA---tcp--%D8%AA%DA%A9-%D8%B3%D8%B1%D9%88%D8%B1)**
+- **ریورس تانل - ایپی پرایوت - UDP**  >>  **[کلیک](https://github.com/Azumi67/Chisel_multipleServers#%D8%B1%DB%8C%D9%88%D8%B1%D8%B3-%D8%AA%D8%A7%D9%86%D9%84---%D8%A7%DB%8C%D9%BE%DB%8C-%D9%BE%D8%B1%D8%A7%DB%8C%D9%88%D8%AA---udp--%D8%AA%DA%A9-%D8%B3%D8%B1%D9%88%D8%B1)**
      
      
      
@@ -210,7 +219,7 @@
 
 
  <p align="right">
-  <img src="https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/b0926d15-fd7e-4871-8bf7-4e775f103f2c" alt="Image" />
+  <img src="https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/e67566a1-8bd9-44be-bffc-2d542a6a567b" alt="Image" />
 </p>
 
 
@@ -253,7 +262,7 @@
 
 
  <p align="right">
-  <img src="https://github.com/Azumi67/ICMP_tunnels/assets/119934376/a77e4553-49f9-4fe0-9bab-ae6e9f404d98" alt="Image" />
+  <img src="https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/97b8438f-cfe1-434a-b094-a95a5ef07257" alt="Image" />
 </p>
 
 
@@ -294,7 +303,7 @@
 
 
 <p align="right">
-  <img src="https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/b8b39c96-d503-4ef0-98d5-daf83331b4bb" alt="Image" />
+  <img src="https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/36691dfa-49cf-44de-8947-8028c82c7dfd" alt="Image" />
 </p>
 
 
@@ -320,13 +329,14 @@
 
 
  <p align="right">
-  <img src="https://github.com/Azumi67/ICMP_tunnels/assets/119934376/a77e4553-49f9-4fe0-9bab-ae6e9f404d98" alt="Image" />
+  <img src="https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/b29cbc85-7c21-46c6-8efb-c11b2362c68b" alt="Image" />
 </p>
 
 
 - من 2 سرور خارج و یک سرور ایران دارم و میخواهم از ایپی 4 و UDP استفاده کنم.
 - نخست سرور ایران را کانفیگ میکنیم پس گزینه 6 را انتخاب میکنم تا کانفیگ سرور ایران را آغاز کنم. 
-- کانفیگ سرور را با ایپی 4 انجام میدهیم و میخواهیم دو سرور خارج به یک سرور ایران وصل بشوند.
+- کانفیگ سرور را با ایپی 4 انجام میدهیم و میخواهیم دو![Uploading iran.png…]()
+ سرور خارج به یک سرور ایران وصل بشوند.
 - ایپی 4 سرور ایران را وارد میکنم.
 - پورت تانل را هم 443 قرار میدهم.
 ----------------------
@@ -406,7 +416,7 @@
 
 
 <p align="right">
-  <img src="https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/ed96e5c0-bb84-4b95-971f-8ed36462809e" alt="Image" />
+  <img src="https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/ccbd60f7-11e6-428d-bf80-4800e415af43" alt="Image" />
 </p>
 
 
@@ -430,7 +440,7 @@
 
 
 <p align="right">
-  <img src="https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/de956217-f901-4b37-88f5-f2cf86b23f74" alt="Image" />
+  <img src="https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/76ac0467-acf6-4d16-812e-c571100402cd" alt="Image" />
 </p>
 
 
@@ -575,7 +585,7 @@
 - پورت کانفیگ خارج من 8080 بود و برای هر دو سرور ایران 8080 خواهد بود. اگر پورت های بیشتری دارید تعداد بیشتری میتوانید وارد کنید.
 - در آخر، ایپی سرور ایرانتان با پورت مورد نظر را مشاهده میکنید. از این ادرس میتوانید در کلاینت V2rayng استفاده نمایید.
 - ایپی سرور اول ایران من 91.91.91.91 و ایپی سرور دوم ایران من 101.101.101.101 میباشد.
-- از این طریق ما میتوانیم با دو ایپی ادرس سرور ایران به یک کانفیگ سرور خارج وصل بشویم و همزمان استفده کنیم.
+- از این طریق ما میتوانیم با دو ایپی ادرس سرور ایران به یک کانفیگ سرور خارج وصل بشویم و همزمان استفاده کنیم.
 - کانفیگ 1 سرور خارج بر روی دو سرور ایران با ایپی 4 -TCP- انجام شد.
 
 
@@ -639,7 +649,7 @@
 - پورت کانفیگ خارج من 8080 بود و برای هر دو سرور ایران 8080 خواهد بود. اگر پورت های بیشتری دارید تعداد بیشتری میتوانید وارد کنید.
 - در آخر، ایپی سرور ایرانتان با پورت مورد نظر را مشاهده میکنید. از این ادرس میتوانید در کلاینت V2rayng استفاده نمایید.
 - ایپی سرور اول ایران من 91.91.91.91 و ایپی سرور دوم ایران من 101.101.101.101 میباشد.
-- از این طریق ما میتوانیم با دو ایپی ادرس سرور ایران به یک کانفیگ سرور خارج وصل بشویم و همزمان استفده کنیم.
+- از این طریق ما میتوانیم با دو ایپی ادرس سرور ایران به یک کانفیگ سرور خارج وصل بشویم و همزمان استفاده کنیم.
 - کانفیگ 1 سرور خارج بر روی دو سرور ایران با ایپی 6 -TCP- انجام شد.
 
 
@@ -691,7 +701,7 @@
 
 
 <p align="right">
-  <img src="https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/56237f82-f0d4-4e13-8b72-112d83b1d987" alt="Image" />
+  <img src="https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/370d1d17-cdc6-44fa-836e-560480fa424f" alt="Image" />
 </p>
 
 
@@ -702,9 +712,9 @@
 - پورت تانل را 443 قرار میدم.
 - پورت کانفیگ خارج من 50824 بود و برای هر دو سرور ایران 50824 خواهد بود. اگر پورت های بیشتری دارید تعداد بیشتری میتوانید وارد کنید.
 - به طور مثال اگر دو پورت 50820 و 50824 دارید، برای هر سرور ایران به صورت جداگانه، پورت ها را قرار میدهیم.
-- در آخر، ایپی سرور ایرانتان با پورت مورد نظر را مشاهده میکنید. از این ادرس میتوانید در کلاینت WIREGUAR استفاده نمایید.
+- در آخر، ایپی سرور ایرانتان با پورت مورد نظر را مشاهده میکنید. از این ادرس میتوانید در کلاینت WIREGUARD استفاده نمایید.
 - ایپی سرور اول ایران من 91.91.91.91 و ایپی سرور دوم ایران من 101.101.101.101 میباشد.
-- از این طریق ما میتوانیم با دو ایپی ادرس سرور ایران به یک کانفیگ سرور خارج وصل بشویم و همزمان استفده کنیم. یعنی اگر دو کانفیگ وایرگارد دارید، هر دو کانفیگ با یک ایپی ایران کار خواهد کرد.
+- از این طریق ما میتوانیم با دو ایپی ادرس سرور ایران به یک کانفیگ سرور خارج وصل بشویم و همزمان استفاده کنیم. یعنی اگر دو کانفیگ وایرگارد دارید، هر دو کانفیگ با یک ایپی ایران کار خواهد کرد.
 - کانفیگ 1 سرور خارج بر روی دو سرور ایران با ایپی 4 -UDP- انجام شد.
 - برای کانفیگ ایپی 6 و UDP هم ماندد نمونه های قبلی، انجام دهید.
 
@@ -789,4 +799,88 @@
 - من یک کانفیگ وایرگارد با پورت 50824 در سرور خارج دارم پس برای پورت خارج ، 50824 را وارد میکنم.
 - در آخر، ایپی سرور ایرانتان با پورت مورد نظر را مشاهده میکنید. از این ادرس میتوانید در کلاینت WIREGUARD استفاده نمایید.
 - ایپی سرور اول ایران من 91.91.91.91 میباشد.
-----------------------
+
+------------------
+**اسکرین شات**
+
+
+<details>
+  <summary align="right">Click to reveal image</summary>
+  
+  <p align="right">
+    <img src="https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/264b6a64-501f-459b-8349-0fab56d7d75d" alt="menu screen" />
+  </p>
+</details>
+
+
+------------------------------------------
+![scri](https://github.com/Azumi67/FRP-V2ray-Loadbalance/assets/119934376/cbfb72ac-eff1-46df-b5e5-a3930a4a6651)
+**اسکریپت های کارآمد :**
+- این اسکریپت ها optional میباشد.
+
+
+ 
+ Opiran Script
+```
+apt install curl -y && bash <(curl -s https://raw.githubusercontent.com/opiran-club/VPS-Optimizer/main/optimizer.sh --ipv4)
+```
+
+Hawshemi script
+
+```
+wget "https://raw.githubusercontent.com/hawshemi/Linux-Optimizer/main/linux-optimizer.sh" -O linux-optimizer.sh && chmod +x linux-optimizer.sh && bash linux-optimizer.sh
+```
+
+-----------------------------------------------------
+![R (a2)](https://github.com/Azumi67/PrivateIP-Tunnel/assets/119934376/716fd45e-635c-4796-b8cf-856024e5b2b2)
+**اسکریپت من**
+----------------
+
+```
+
+```
+
+- اگر با دستور بالا نتوانستید اسکریپت را اجرا کنید، نخست دستور زیر را اجرا نمایید و سپس دستور بالا را دوباره اجرا نمایید.
+- 
+```
+sudo apt-get install python-pip -y  &&  apt-get install python3 -y && alias python=python3 && python -m pip install colorama && python -m pip install netifaces
+```
+-
+
+--------------------------------------
+ <div dir="rtl">&bull;  دستور زیر برای کسانی هست که پیش نیاز ها را در سرور، نصب شده دارند</div>
+ 
+```
+
+```
+--------------------------------------
+ <div dir="rtl">&bull; اگر سرور شما خطای externally-managed-environment داد از دستور زیر اقدام به اجرای اسکریپت نمایید.</div>
+ 
+```
+
+```
+
+---------------------------------------------
+![R (7)](https://github.com/Azumi67/PrivateIP-Tunnel/assets/119934376/42c09cbb-2690-4343-963a-5deca12218c1)
+**تلگرام** 
+![R (6)](https://github.com/Azumi67/FRP-V2ray-Loadbalance/assets/119934376/f81bf6e1-cfed-4e24-b944-236f5c0b15d3) [اپیران- OPIRAN](https://github.com/opiran-club)
+
+---------------------------------
+![R23 (1)](https://github.com/Azumi67/FRP-V2ray-Loadbalance/assets/119934376/18d12405-d354-48ac-9084-fff98d61d91c)
+**سورس ها**
+
+
+![R (9)](https://github.com/Azumi67/FRP-V2ray-Loadbalance/assets/119934376/33388f7b-f1ab-4847-9e9b-e8b39d75deaa) [سورس  CHISEL](https://github.com/jpillora/chisel)
+
+![R (9)](https://github.com/Azumi67/FRP-V2ray-Loadbalance/assets/119934376/33388f7b-f1ab-4847-9e9b-e8b39d75deaa) [سورس  OPIRAN](https://github.com/opiran-club)
+
+![R (9)](https://github.com/Azumi67/6TO4-GRE-IPIP-SIT/assets/119934376/4758a7da-ab54-4a0a-a5a6-5f895092f527)[سورس  Hwashemi](https://github.com/hawshemi/Linux-Optimizer)
+
+
+
+-----------------------------------------------------
+
+![youtube-131994968075841675](https://github.com/Azumi67/FRP-V2ray-Loadbalance/assets/119934376/24202a92-aff2-4079-a6c2-9db14cd0ecd1)
+**ویدیوی آموزش**
+
+-----------------------------------------

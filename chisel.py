@@ -775,8 +775,6 @@ def chisel_mnu():
         display_error("\033[91mInstallation process interrupted..\033[0m")
         exit(1)
     display_loading()
-    with open('/etc/resolv.conf', 'w') as resolv_file:
-        resolv_file.write("nameserver 8.8.8.8\n")
 
     arch = subprocess.check_output('uname -m', shell=True).decode().strip()
 

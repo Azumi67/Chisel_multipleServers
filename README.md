@@ -862,7 +862,7 @@ python3 <(curl -Ls https://raw.githubusercontent.com/Azumi67/Chisel_multipleServ
  <div dir="rtl">&bull; اگر سرور شما خطای externally-managed-environment داد از دستور زیر اقدام به اجرای اسکریپت نمایید.</div>
  
 ```
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/Azumi67/ICMP_tunnels/main/managed.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Azumi67/Chisel_multipleServers/main/managed.sh)"
 ```
 
 ---------------------------------------------

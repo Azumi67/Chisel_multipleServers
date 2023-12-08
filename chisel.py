@@ -829,7 +829,7 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=21600
+RestartSec=10
 User=root
 
 [Install]
@@ -898,7 +898,7 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=21600
+RestartSec=10
 User=root
 
 [Install]
@@ -972,7 +972,7 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=21600
+RestartSec=10
 User=root
 
 [Install]
@@ -1038,7 +1038,7 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=21600
+RestartSec=10
 User=root
 
 [Install]
@@ -1096,7 +1096,7 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=21600
+RestartSec=10
 User=root
 
 [Install]
@@ -1173,7 +1173,7 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=21600
+RestartSec=10
 User=root
 
 [Install]
@@ -1241,7 +1241,7 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=21600
+RestartSec=10
 User=root
 
 [Install]
@@ -1314,7 +1314,7 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=21600
+RestartSec=10
 User=root
 
 [Install]
@@ -1380,7 +1380,7 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=21600
+RestartSec=10
 User=root
 
 [Install]
@@ -1458,7 +1458,7 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=21600
+RestartSec=10
 User=root
 
 [Install]
@@ -1533,7 +1533,7 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=21600
+RestartSec=10
 User=root
 
 [Install]
@@ -1601,7 +1601,7 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=21600
+RestartSec=10
 User=root
 
 [Install]
@@ -1693,7 +1693,7 @@ After=network.target
 [Service]
 ExecStart=/bin/bash /etc/ping.sh
 Restart=always
-RestartSec=21600
+RestartSec=10
 User=root
 
 [Install]
@@ -1884,7 +1884,7 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=21600
+RestartSec=10
 User=root
 
 [Install]
@@ -1960,7 +1960,7 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=21600
+RestartSec=10
 User=root
 
 [Install]
@@ -2035,7 +2035,7 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=21600
+RestartSec=10
 User=root
 
 [Install]
@@ -2111,7 +2111,7 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=21600
+RestartSec=10
 User=root
 
 [Install]

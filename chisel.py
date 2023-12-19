@@ -94,8 +94,8 @@ def display_logo2():
     print(logo2)
     
 def display_logo():
-    colorama.init()  
-    logo = """ 
+    colorama.init(autoreset=True)
+    logo = """
 \033[1;96m
                   ⣾⣿⣿⣿⣿⣿⣿⣿⣿⣯⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠛⣿⣿
                 ⢺⣽⡿⣅⠹⣿⣿⣿⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢿⣿⡻⣿⣻⣿⣿⣿⣁⣴⢟⡻⠻⣯⣌⣿

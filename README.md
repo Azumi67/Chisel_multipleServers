@@ -3,7 +3,7 @@
 ---------------------------------------------------------------
 
 -----------
-![Update-Note--Arvin61r58](https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/271505eb-f63d-40c4-a50a-8852c874d07c)**ااپدیت**
+![Update-Note--Arvin61r58](https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/271505eb-f63d-40c4-a50a-8852c874d07c)**اپدیت**
 
 - نسخه بدون لوگو انیمه ای برای کسانی که مشکل display_logo داشتند. اگر مشکلتون با این حل نشد، به من بگید تا بررسی کنم.
 

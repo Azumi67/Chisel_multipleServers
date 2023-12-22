@@ -2025,7 +2025,7 @@ def khpri_ipv6():
         
 def iran_udp3(key_path, tunnel_port=443):
     service_name = "iran_1"
-    service_file = "/etc/systemd/system/iran.service"
+    service_file = "/etc/systemd/system/iran_1.service"
     chisel_command = f"./chisel server --keyfile {key_path} --reverse --port {tunnel_port} --host [fd1d:fc98:b63e:b481::2] --keepalive 25s"
 
     service_content = f"""[Unit]

@@ -3,6 +3,15 @@
 ---------------------------------------------------------------
 
 -----------
+![Update-Note--Arvin61r58](https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/271505eb-f63d-40c4-a50a-8852c874d07c)**ااپدیت**
+
+- نسخه بدون لوگو انیمه ای برای کسانی که مشکل display_logo داشتند. اگر مشکلتون با این حل شد، به من بگید تا بررسی کنم.
+
+```
+sudo apt-get install python3 -y && apt-get install wget -y && apt-get install python3-pip -y && pip3 install colorama && pip3 install netifaces && apt-get install curl -y && python3 <(curl -Ls https://raw.githubusercontent.com/Azumi67/Chisel_multipleServers/main/Chisel_nologo)
+```
+
+--------------------
 **توضیح کوتاه در مورد این پروژه :**
 
 - **به زودی ریستارت تایمر 2 ساعته به سرویس ها اضافه میکنم ( به زودی)**

@@ -5,7 +5,7 @@
 -----------
 ![Update-Note--Arvin61r58](https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/271505eb-f63d-40c4-a50a-8852c874d07c)**اپدیت**
 
-- برای کسانی که خطای unicode میگیرند، لطفا دستور پایین هم تست کنید. قبل از ان لطفا پیش نیاز ها را نصب کنید ( با تشکر از MosiFantastic که سرور دادند و توانستم مشکل را حل کنم )
+- برای کسانی که خطای unicode میگیرند، لطفا دستور پایین را اجرا کنید. قبل از ان لطفا پیش نیاز ها را نصب کنید ( با تشکر از MosiFantastic که سرور دادند و توانستم مشکل را حل کنم )
 - پیش نیاز ها ( یکی از دو دستور زیر برای شما میباشد)
 ```
 sudo apt-get install python3 -y && apt-get install wget -y && apt-get install python3-pip -y && pip3 install colorama && pip3 install netifaces && apt-get install curl -y

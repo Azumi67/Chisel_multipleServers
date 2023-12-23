@@ -48,12 +48,22 @@ sudo apt-get install wget -y && sudo wget -O /etc/logo.sh https://raw.githubuser
 ------------------------
 ![youtube-131994968075841675](https://github.com/Azumi67/FRP-V2ray-Loadbalance/assets/119934376/24202a92-aff2-4079-a6c2-9db14cd0ecd1)
 **ویدیوی آموزش**
-
+-
 - **با تشکر از 69 که زحمت کشیدن و اموزش ویدیوی این اسکریپت و تانل را ساختند. دقت نمایید که پارت بندی خواهد داشت، پس برای یادگیری سایر موارد این تانل ، چنل ایشون را subscribe کنید.**
+- **پارت اول :**
 
 <div align="right">
 
 [![Video Title](https://img.youtube.com/vi/AjNrYOpNaQE/0.jpg)](https://www.youtube.com/watch?v=AjNrYOpNaQE)
+
+</div>
+
+
+- **پارت دوم :**
+
+<div align="right">
+
+[![Video Title](https://img.youtube.com/vi/Avi8ErLPJJE/0.jpg)]([https://www.youtube.com/watch?v=AjNrYOpNaQE](https://www.youtube.com/watch?v=Avi8ErLPJJE))
 
 </div>
 

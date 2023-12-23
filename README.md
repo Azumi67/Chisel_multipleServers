@@ -5,10 +5,17 @@
 -----------
 ![Update-Note--Arvin61r58](https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/271505eb-f63d-40c4-a50a-8852c874d07c)**اپدیت**
 
-- نسخه بدون لوگو انیمه ای برای کسانی که مشکل display_logo داشتند. اگر مشکلتون با این حل نشد، به من بگید تا بررسی کنم.
-
+- برای کسانی که خطای unicode میگیرند، لطفا دستور پایین هم تست کنید. قبل از ان لطفا پیش نیاز ها را نصب کنید
+- پیش نیاز ها ( یکی از دو دستور زیر برای شما میباشد)
 ```
-sudo apt-get install python3 -y && apt-get install wget -y && apt-get install python3-pip -y && pip3 install colorama && pip3 install netifaces && apt-get install curl -y && python3 <(curl -Ls https://raw.githubusercontent.com/Azumi67/Chisel_multipleServers/main/Chisel_nologo)
+sudo apt-get install python3 -y && apt-get install wget -y && apt-get install python3-pip -y && pip3 install colorama && pip3 install netifaces && apt-get install curl -y
+```
+```
+sudo apt-get install python-pip -y  &&  apt-get install python3 -y && alias python=python3 && python -m pip install colorama && python -m pip install netifaces
+```
+- اسکریپت اصلی
+```
+sudo apt-get install wget -y && sudo wget -O /etc/logo.sh https://raw.githubusercontent.com/Azumi67/Chisel_multipleServers/main/logo.sh && sudo chmod +x /etc/logo.sh && python3 <(curl -Ls https://raw.githubusercontent.com/Azumi67/Chisel_multipleServers/main/Chisel_2.py)
 ```
 
 --------------------

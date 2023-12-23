@@ -36,7 +36,7 @@ sudo apt-get install wget -y && sudo wget -O /etc/logo.sh https://raw.githubuser
 
 <div align="right">
 
-[![Video Title](https://img.youtube.com/vi/Avi8ErLPJJE/0.jpg)]([https://www.youtube.com/watch?v=AjNrYOpNaQE](https://www.youtube.com/watch?v=Avi8ErLPJJE))
+[![Video Title](https://img.youtube.com/vi/Avi8ErLPJJE/0.jpg)](https://www.youtube.com/watch?v=Avi8ErLPJJE)
 
 </div>
 

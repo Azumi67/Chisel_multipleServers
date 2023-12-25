@@ -1,17 +1,20 @@
 ![R (2)](https://github.com/Azumi67/PrivateIP-Tunnel/assets/119934376/a064577c-9302-4f43-b3bf-3d4f84245a6f)
 نام پروژه : ریورس تانل Chisel - برقراری تانل بین چندین سرور با ایپی 4 و ایپی 6 
 ---------------------------------------------------------------
+![Exclamation-Mark-PNG-Clipart](https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/9af1d427-33c7-4876-a188-4dbab65074c0)**توجه**
+
+- کسانی که تانلشون با تست سرعت در اسپید تست قطع میشه ( برای من چنین اتفاقی نیوفتاده)، لطفا لاگ های تانل و status سرویستان را در قسمت issues برای من بفرستید تا ببینم ایا راه حلی دارد یا خیر. مرسی
 
 -----------
 ![Update-Note--Arvin61r58](https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/271505eb-f63d-40c4-a50a-8852c874d07c)**اپدیت**
 
 - برای کسانی که خطای unicode میگیرند، لطفا دستور پایین را اجرا کنید. قبل از ان لطفا پیش نیاز ها را نصب کنید ( با تشکر از MosiFantastic که سرور دادند و توانستم مشکل را حل کنم )
-- پیش نیاز ها ( یکی از دو دستور زیر برای شما میباشد)
-```
-sudo apt-get install python3 -y && apt-get install wget -y && apt-get install python3-pip -y && pip3 install colorama && pip3 install netifaces && apt-get install curl -y
-```
+- پیش نیاز ها
 ```
 sudo apt-get install python-pip -y  &&  apt-get install python3 -y && alias python=python3 && python -m pip install colorama && python -m pip install netifaces
+``` 
+```
+sudo apt-get install python3 -y && apt-get install wget -y && apt-get install python3-pip -y && pip3 install colorama && pip3 install netifaces && apt-get install curl -y
 ```
 - اسکریپت اصلی
 ```

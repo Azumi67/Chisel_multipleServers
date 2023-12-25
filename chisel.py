@@ -774,7 +774,6 @@ def chisel_mnu():
     def stop_loading():
         display_error("\033[91mInstallation process interrupted..\033[0m")
         exit(1)
-    display_loading()
 
     arch = subprocess.check_output('uname -m', shell=True).decode().strip()
 
@@ -788,8 +787,10 @@ def chisel_mnu():
         display_error("\033[91mUnsupported CPU architecture: {}\033[0m".format(arch))
         return
 
+    display_loading()
+
     display_notification("\033[93mDownloading Chisel...\033[0m")
-    download_result = subprocess.run(f"wget {chisel_download_url} -O {chisel_directory_name}.gz > /dev/null 2>&1", shell=True)
+    download_result = subprocess.run(f"wget --quiet --show-progress {chisel_download_url} -O {chisel_directory_name}.gz", shell=True)
     if download_result.returncode != 0:
         display_error("\033[91mChisel download failed.\033[0m")
         return
@@ -803,7 +804,7 @@ def chisel_mnu():
         os.rename(chisel_directory_name, "chisel")
         subprocess.run(f"chmod +x chisel", shell=True)
     except Exception as e:
-        display_error("\033[91mError occurred during Chisel installation !!: {}\033[0m".format(str(e)))
+        display_error("\033[91mError occurred during Chisel installation: {}\033[0m".format(str(e)))
         return
 
     display_checkmark("\033[92mDownload Completed!\033[0m")

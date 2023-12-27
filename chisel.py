@@ -1732,7 +1732,7 @@ def kharej_private_menu():
     subprocess.run(["ip", "addr", "add", initial_ip, "dev", "azumich"], stdout=subprocess.DEVNULL)
 
     display_notification("\033[93mAdding commands...\033[0m")
-    with open("/etc/private.sh", "w") as f:
+    with open("/etc/chi.sh", "w") as f:
         f.write("/sbin/modprobe sit\n")
         f.write(f"ip tunnel add azumich mode sit remote {remote_ip} local {local_ip} ttl 255\n")
         f.write("ip link set dev azumich up\n")

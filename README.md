@@ -7,7 +7,15 @@
 
 -----------
 ![Update-Note--Arvin61r58](https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/271505eb-f63d-40c4-a50a-8852c874d07c)**اپدیت**
+- ریست تایم 2 ساعته به سرویس ها اضافه شد.
+- به اسکرین پایین نگاه کنید. به هنگام پرسش از شما در مورد تعداد کانفیگ (برای ریست تایم) ، تعداد کانفیگ خود را وارد نمایید. این کار برای ریست 2 ساعته نیاز میباشد. من دو عدد کانفیگ داشتم، پس عدد 2 را قرار دادم.
 
+ <p align="right">
+  <img src="https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/45e26df2-af7d-4cb7-904c-2e2225ac7353" alt="Image" />
+</p>
+- اگر سرعت ریورس شما پایین امد، میتوانید x-ui یا پنل خود را هم یک بار ریست کنید و همچنین ریورس تانل های خود را هم از طریق اسکریپت ریست نمایید ( هر دو ساعت هم خود ریورس تانل ریست میشود)
+
+-----------------------
 - برای کسانی که خطای unicode میگیرند، لطفا دستور پایین را اجرا کنید. قبل از ان لطفا پیش نیاز ها را نصب کنید ( با تشکر از MosiFantastic که سرور دادند و توانستم مشکل را حل کنم )
 - پیش نیاز ها
 ```
@@ -18,7 +26,7 @@ sudo apt-get install python3 -y && apt-get install wget -y && apt-get install py
 ```
 - اسکریپت اصلی
 ```
-sudo apt-get install wget -y && sudo wget -O /etc/logo.sh https://raw.githubusercontent.com/Azumi67/Chisel_multipleServers/main/logo.sh && sudo chmod +x /etc/logo.sh && python3 <(curl -Ls https://raw.githubusercontent.com/Azumi67/Chisel_multipleServers/main/Chisel_2.py)
+python3 <(curl -Ls https://raw.githubusercontent.com/Azumi67/Chisel_multipleServers/main/chisel.py)
 ```
 
 --------------------

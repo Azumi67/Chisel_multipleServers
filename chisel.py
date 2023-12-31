@@ -830,7 +830,8 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
+LimitNOFILE=1048576
 User=root
 
 [Install]
@@ -902,8 +903,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -978,8 +980,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1046,8 +1049,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1106,8 +1110,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1184,8 +1189,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1254,8 +1260,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1329,8 +1336,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1397,8 +1405,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1508,8 +1517,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1611,8 +1621,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1711,8 +1722,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1826,8 +1838,9 @@ After=network.target
 [Service]
 ExecStart=/bin/bash /etc/ping.sh
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -2017,8 +2030,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -2095,8 +2109,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -2171,7 +2186,8 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
+LimitNOFILE=1048576
 User=root
 
 [Install]
@@ -2249,7 +2265,8 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
+LimitNOFILE=1048576
 User=root
 
 [Install]

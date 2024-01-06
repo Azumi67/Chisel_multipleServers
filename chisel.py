@@ -1890,6 +1890,7 @@ def kharej_private_menu():
         f.write(f"ip tunnel add azumich mode sit remote {remote_ip} local {local_ip} ttl 255\n")
         f.write("ip link set dev azumich up\n")
         f.write("ip addr add fd1d:fc98:b63e:b481::1/64 dev azumich\n")
+        f.write("ip -6 route add fd1d:fc98:b63e:b481::2/64 dev azumich\n")
 
     display_checkmark("\033[92mPrivate ip added successfully!\033[0m")
 
@@ -1968,6 +1969,7 @@ def iran_private_menu():
         f.write(f"ip tunnel add azumich mode sit remote {remote_ip} local {local_ip} ttl 255\n")
         f.write("ip link set dev azumich up\n")
         f.write("ip addr add fd1d:fc98:b63e:b481::2/64 dev azumich\n")
+        f.write("ip -6 route add fd1d:fc98:b63e:b481::1/64 dev azumich\n")
 
     
     display_checkmark("\033[92mPrivate ip added successfully!\033[0m")

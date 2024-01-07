@@ -846,7 +846,7 @@ WantedBy=multi-user.target
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
 
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mIRAN service started successfully!\033[0m")
 
@@ -918,7 +918,8 @@ WantedBy=multi-user.target
             file.write(service_content)
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
+
         display_checkmark(f"\033[92mKharej service {config_number} (Server {server_number}) started successfully!\033[0m")
 
         subprocess.run(f"systemctl enable {service_name}", shell=True, check=True)
@@ -996,7 +997,7 @@ WantedBy=multi-user.target
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
 
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mKharej service {} started successfully!\033[0m".format(config_number))
 
@@ -1064,7 +1065,7 @@ WantedBy=multi-user.target
             file.write(service_content)
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mIRAN service started successfully!\033[0m")
 
@@ -1125,7 +1126,7 @@ WantedBy=multi-user.target
             file.write(service_content)
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
         display_checkmark("\033[92mKharej service {}/{} started successfully!\033[0m".format(server_number, config_number))
 
         subprocess.run(f"systemctl enable {service_name}", shell=True, check=True)
@@ -1205,7 +1206,7 @@ WantedBy=multi-user.target
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
 
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mKharej service {} started successfully!\033[0m".format(config_number))
 
@@ -1275,7 +1276,7 @@ WantedBy=multi-user.target
             file.write(service_content)
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mIRAN service started successfully!\033[0m")
 
@@ -1352,7 +1353,7 @@ WantedBy=multi-user.target
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
 
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mKharej service {} started successfully!\033[0m".format(config_number))
 
@@ -1420,7 +1421,7 @@ WantedBy=multi-user.target
             file.write(service_content)
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
         display_checkmark("\033[92mKharej service {}/{} started successfully!\033[0m".format(server_number, config_number))
 
         subprocess.run(f"systemctl enable {service_name}", shell=True, check=True)
@@ -1534,7 +1535,7 @@ WantedBy=multi-user.target
             file.write(service_content)
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
         display_checkmark("\033[92mKharej service {}/{} started successfully!\033[0m".format(server_number, config_number))
 
         subprocess.run(f"systemctl enable {service_name}", shell=True, check=True)
@@ -1640,7 +1641,7 @@ WantedBy=multi-user.target
             file.write(service_content)
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mIRAN service started successfully!\033[0m")
 
@@ -1744,7 +1745,7 @@ WantedBy=multi-user.target
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
 
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mKharej service {} started successfully!\033[0m".format(config_number))
 
@@ -1776,7 +1777,7 @@ def delete_cron():
         subprocess.call(f"echo '{new_crontab}' | crontab -", shell=True)
         display_notification("\033[92mDeleting Previous Crons..\033[0m")
     else:
-        display_error("\033[91mNothing Found, moving on..!\033[0m")        
+        print("\033[91mCron doesn't exists, moving on..!\033[0m")        
         
 def kharej_ipv6_udp():
     if not os.path.isfile("/root/chisel"):
@@ -1860,7 +1861,7 @@ WantedBy=multi-user.target
 
     subprocess.run(['systemctl', 'daemon-reload'])
     subprocess.run(['systemctl', 'enable', 'ping.service'])
-    subprocess.run(['systemctl', 'start', 'ping.service'])
+    subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/ping.service'])
     sleep(1)
     subprocess.run(['systemctl', 'restart', 'ping.service'])
     
@@ -2053,7 +2054,7 @@ WantedBy=multi-user.target
             file.write(service_content)
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mIRAN service started successfully!\033[0m")
 
@@ -2133,7 +2134,7 @@ WantedBy=multi-user.target
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
 
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mKharej service {} started successfully!\033[0m".format(config_number))
 
@@ -2209,7 +2210,7 @@ WantedBy=multi-user.target
             file.write(service_content)
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mIRAN service started successfully!\033[0m")
 
@@ -2289,7 +2290,7 @@ WantedBy=multi-user.target
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
 
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mKharej service {config_number} started successfully!\033[0m")
 

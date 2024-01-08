@@ -951,7 +951,7 @@ def config_kharej():
         print("\033[93m───────────────────────────\033[0m")
         display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
         print("\033[93m───────────────────────────\033[0m")
-        res_chisel3()
+        
         server_configs = []
 
         for i in range(1, num_servers + 1):
@@ -971,7 +971,7 @@ def config_kharej():
 
             for j, (kharej_port, df_port) in enumerate(configs, start=1):
                 kharej_tc(i, j, iran_ipv4, int(kharej_port), int(df_port))
-            
+            res_chisel3()
             print("\033[93m╭──────────────────────────────────────────────────────────────────────╮\033[0m")
             for j, (kharej_port, df_port) in enumerate(configs, start=1):
                 print(f"\033[93m| Server {i} - Config {j}: Your Address & Port: {iran_ipv4} : {kharej_port}  \033[0m")
@@ -1032,7 +1032,7 @@ def kharej_ipv4():
     print("\033[93m───────────────────────────\033[0m")
     display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
     print("\033[93m───────────────────────────\033[0m")
-    res_chisel1()
+    
     num_configs = int(input("\033[93mEnter the \033[92mnumber\033[93m of \033[96mKharej\033[93m Configs: \033[0m"))
     iran_ipv4 = input("\033[93mEnter \033[92mIRAN\033[96m IPV4\033[93m address: \033[0m")
     tunnel_port = input("\033[93mEnter \033[92mTunnel port\033[93m (default: 443): \033[0m") or "443"
@@ -1046,7 +1046,7 @@ def kharej_ipv4():
         server_ports.append(kharej_port)
 
         kharej_tcp(i, iran_ipv4, kharej_port, tunnel_port)
-    
+    res_chisel1()
     print("\033[93m╭─────────────────────────────────────────────────────────╮\033[0m")
     for i in range(num_configs):
         print(f"\033[93m| Config {i+1} - Your Address & Port: {iran_ipv4} : {server_ports[i]}  \033[0m")
@@ -1159,7 +1159,7 @@ def config_kharej6():
         print("\033[93m───────────────────────────\033[0m")
         display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
         print("\033[93m───────────────────────────\033[0m")
-        res_chisel3()
+        
         num_servers = int(input("\033[93mEnter the number of \033[92mIRAN\033[93m servers:\033[0m "))
         server_configs = []
 
@@ -1179,7 +1179,7 @@ def config_kharej6():
 
                 tunnel_port = input("\033[93mEnter \033[92mTunnel Port\033[93m (default: 443): \033[0m") or "443"
                 kharej_tc2(j, i, iran_ipv6, kharej_port, tunnel_port)
-            
+            res_chisel3()
             print("\033[93m╭──────────────────────────────────────────────────────────────────────╮\033[0m")
             for j, config_port in enumerate(configs, start=1):
                 print(f"\033[93m| Server {i} - Config {j}: Your Address & Port: {iran_ipv4} : {config_port}  \033[0m")
@@ -1241,7 +1241,7 @@ def kharej_ipv6():
     print("\033[93m───────────────────────────\033[0m")
     display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
     print("\033[93m───────────────────────────\033[0m")
-    res_chisel1()
+    
     num_configs = int(input("\033[93mEnter the \033[92mnumber\033[93m of \033[96mKharej\033[93m Configs: \033[0m"))
     iran_ipv4 = input("\033[93mEnter \033[92mIRAN\033[96m IPV4\033[93m address: \033[0m")
     iran_ipv6 = input("\033[93mEnter \033[92mIRAN\033[96m IPV6\033[93m address: \033[0m")
@@ -1256,7 +1256,7 @@ def kharej_ipv6():
         server_ports.append(kharej_port)
 
         kharej_tcp2(i, iran_ipv6, kharej_port, tunnel_port)
-    
+    res_chisel1()
     print("\033[93m╭─────────────────────────────────────────────────────────╮\033[0m")
     for i in range(num_configs):
         print(f"\033[93m| Config {i+1} - Your Address & Port: {iran_ipv4} : {server_ports[i]}  \033[0m")
@@ -1388,7 +1388,7 @@ def kharej_ipv4_udp():
     print("\033[93m───────────────────────────\033[0m")
     display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
     print("\033[93m───────────────────────────\033[0m")
-    res_chisel1()
+    
     num_configs = int(input("\033[93mEnter the \033[92mnumber\033[93m of \033[96mKharej\033[93m Configs: \033[0m"))
     iran_ipv4 = input("\033[93mEnter \033[92mIRAN\033[96m IPV4\033[93m address: \033[0m")
     tunnel_port = input("\033[93mEnter \033[92mTunnel\033[96m port\033[93m [Default: 443]: \033[0m") or "443"
@@ -1402,7 +1402,7 @@ def kharej_ipv4_udp():
         server_ports.append(kharej_port)
 
         kharej_udp(i, iran_ipv4, kharej_port, tunnel_port)
-    
+    res_chisel1()
     print("\033[93m╭─────────────────────────────────────────────────────────╮\033[0m")
     for i in range(num_configs):
         print(f"\033[93m| Config {i+1} - Your Address & Port: {iran_ipv4} : {server_ports[i]}  \033[0m")
@@ -1454,7 +1454,7 @@ def config_ud6():
         print("\033[93m───────────────────────────\033[0m")
         display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
         print("\033[93m───────────────────────────\033[0m")
-        res_chisel3()
+        
         num_servers = int(input("\033[93mEnter the number of \033[92mIRAN\033[93m servers:\033[0m "))
         server_configs = []
 
@@ -1475,7 +1475,7 @@ def config_ud6():
                 configs.append(kharej_port)
 
                 kharej_ud6(j, i, iran_ipv6, kharej_port, tunnel_port)
-            
+            res_chisel3()
             print("\033[93m╭──────────────────────────────────────────────────────────────────────╮\033[0m")
             for j, config_port in enumerate(configs, start=1):
                 print(f"\033[93m| Server {i} - Config {j}: Your Address & Port: {iran_ipv4} : {config_port}  \033[0m")
@@ -1499,8 +1499,8 @@ def res_chisel3():
         f.write("systemctl daemon-reload\n")
         f.write("sudo sync; echo 1 > /proc/sys/vm/drop_caches\n")
         f.write("sudo journalctl --vacuum-size=1M\n")
-
-        num_configs = int(input("\033[93mEnter\033[92m number of configs\033[93m[Reset timer]:\033[0m "))
+        print("\033[93m────────────────────────\033[0m") 
+        num_configs = int(input("\033[93mEnter\033[92m number of configs\033[93m[For 2 Hours Reset timer]:\033[0m "))
         for i in range(1, num_configs + 1):
             f.write(f"systemctl restart kharej_1_{i}\n")  
             f.write(f"systemctl restart kharej_2_{i}\n") 
@@ -1567,7 +1567,7 @@ def config_kha_udp():
         print("\033[93m───────────────────────────\033[0m")
         display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
         print("\033[93m───────────────────────────\033[0m")
-        res_chisel3()
+        
         server_configs = []
 
         for i in range(1, num_servers + 1):
@@ -1586,7 +1586,7 @@ def config_kha_udp():
 
             for j, config_port in enumerate(configs, start=1):
                 kharej_ud(j, i, iran_ipv4, config_port, tunnel_port)
-            
+            res_chisel3()
             print("\033[93m╭───────────────────────────────────────────────────────────────────────────────────╮\033[0m")
             for j, config_port in enumerate(configs, start=1):
                 print(f"\033[93m| Server {i} - Config {j}: Your Address & Port: {iran_ipv4} : {config_port}  \033[0m")
@@ -1711,8 +1711,8 @@ def res_chisel1():
         f.write("systemctl daemon-reload\n")
         f.write("sudo sync; echo 1 > /proc/sys/vm/drop_caches\n")
         f.write("sudo journalctl --vacuum-size=1M\n")
-
-        num_configs = int(input("\033[93mEnter\033[92m number of configs\033[93m[2 Hours Reset timer]:\033[0m "))
+        print("\033[93m────────────────────────\033[0m") 
+        num_configs = int(input("\033[93mEnter\033[92m number of configs\033[93m[For 2 Hours Reset timer]:\033[0m "))
         for i in range(1, num_configs + 1):
             config_name = f"kharej_{i}"
             f.write(f"systemctl restart {config_name}\n")
@@ -1801,7 +1801,7 @@ def kharej_ipv6_udp():
     print("\033[93m───────────────────────────\033[0m")
     display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
     print("\033[93m───────────────────────────\033[0m")
-    res_chisel1()
+    
     num_configs = int(input("\033[93mEnter the \033[92mnumber\033[93m of \033[96mKharej\033[93m Configs: \033[0m"))
 
     iran_ipv4 = input("\033[93mEnter \033[92mIRAN\033[96m IPV4\033[93m address: \033[0m")
@@ -1817,7 +1817,7 @@ def kharej_ipv6_udp():
         server_ports.append(kharej_port)
 
         kharej_udp2(i, iran_ipv4, iran_ipv6, kharej_port, tunnel_port)
-    
+    res_chisel1()
     print("\033[93m╭─────────────────────────────────────────────────────────╮\033[0m")
     for i in range(num_configs):
         print(f"\033[93m| Config {i+1} - Your Address & Port: {iran_ipv4} : {server_ports[i]}  \033[0m")
@@ -2167,7 +2167,7 @@ def khpri_ipv6():
     print("\033[93m───────────────────────────\033[0m")
     display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
     print("\033[93m───────────────────────────\033[0m")
-    res_chisel1()
+    
     interface_check = subprocess.run(["ip", "link", "show", "azumich"], capture_output=True, text=True)
     if "azumich" in interface_check.stdout:
         print("\033[96mazumich interface is available.\033[0m")
@@ -2188,7 +2188,7 @@ def khpri_ipv6():
         server_ports.append(kharej_port)
 
         khpri_tcp2(i, kharej_port, tunnel_port)
-    
+    res_chisel1()
     print("\033[93m╭─────────────────────────────────────────────────────────╮\033[0m")
     for i in range(num_configs):
         print(f"\033[93m| Config {i+1} - Your Address & Port: {remote_ip} : {server_ports[i]}  \033[0m")
@@ -2323,7 +2323,7 @@ def khpri_ipv6_udp():
     print("\033[93m───────────────────────────\033[0m")
     display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
     print("\033[93m───────────────────────────\033[0m")
-    res_chisel1()
+    
     interface_check = subprocess.run(["ip", "link", "show", "azumich"], capture_output=True, text=True)
     if "azumich" in interface_check.stdout:
         print("\033[96mazumich interface is available.\033[0m")
@@ -2342,7 +2342,7 @@ def khpri_ipv6_udp():
         server_ports.append(kharej_port)
 
         kharej_udp3(i, kharej_port, tunnel_port)
-    
+    res_chisel1()
     print("\033[93m╭─────────────────────────────────────────────────────────╮\033[0m")
     for i in range(num_configs):
         print(f"\033[93m| Config {i+1} - Your Address & Port: {remote_ip} : {server_ports[i]}  \033[0m")

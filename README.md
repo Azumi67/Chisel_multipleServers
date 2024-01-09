@@ -19,6 +19,18 @@
 
 
  ------------------------------------------------------
+ <div align="right">
+  <details>
+    <summary><strong>نکته ای مهم توسط اقا امین</strong></summary>
+
+<p align="right">
+  <img src="https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/1ffec80d-4456-43d7-b704-699e8d8aa155" alt="Image" width="400" />
+</p>
+  </details>
+</div>
+
+---------------------
+
 <div align="right">
   <details>
     <summary><strong>توضیحات</strong></summary>

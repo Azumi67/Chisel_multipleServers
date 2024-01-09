@@ -55,9 +55,9 @@
 
  ------------------------------------------------------
 
-<div align="right">
+ <div align="right">
   <details>
-    <summary><strong>نکات</strong></summary>
+    <summary><strong><img src="https://github.com/Azumi67/Chisel_multipleServers/assets/119934376/83d62574-74f2-4e19-bb09-e84e85de9e0b" alt="Image"> </strong>نکات</summary>
   
 - ممکنه رو هدر اسپیدتست، اختلال داشته باشد.
 - این اسکریپت بارها تست شده و تمام گزینه هایش بدون مشکل کار میکند. سرویس ها هم ساخته میشود و کانفیگی هم از بین نمیرود. شما اختلال خود را با دستورات پایین بیابید

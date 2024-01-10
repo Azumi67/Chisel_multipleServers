@@ -172,13 +172,13 @@ def main_menu():
             print("4. \033[93mChisel \033[92mUDP\033[93m [IPV6]\033[0m")
             print(border)
             print("\033[93m─────────────────────────────────────────── \033[0m")
-            display_notification("\033[92m[5] \033[96mKharej \033[92m[1] \033[93mIRAN\033[0m")
+            display_notification("\033[92m[7] \033[96mKharej \033[92m[1] \033[93mIRAN\033[0m")
             print("\033[93m─────────────────────────────────────────── \033[0m")
-            print("5. \033[96mChisel \033[92mTCP \033[96m[IPV4] \033[92m[5] \033[96mKHAREJ\033[92m [1] \033[96mIRAN")
-            print("\033[97m6. \033[96mChisel \033[92mUDP \033[96m[IPV4] \033[92m[5] \033[96mKHAREJ\033[92m [1] \033[96mIRAN")
+            print("5. \033[96mChisel \033[92mTCP \033[96m[IPV4] \033[92m[7] \033[96mKHAREJ\033[92m [1] \033[96mIRAN")
+            print("\033[97m6. \033[96mChisel \033[92mUDP \033[96m[IPV4] \033[92m[7] \033[96mKHAREJ\033[92m [1] \033[96mIRAN")
             
-            print("\033[97m7. \033[93mChisel \033[92mTCP \033[93m[IPV6] \033[92m[5] \033[93mKHAREJ\033[92m [1] \033[93mIRAN")
-            print("\033[97m8. \033[93mChisel \033[92mUDP \033[93m[IPV6] \033[92m[5] \033[93mKHAREJ\033[92m [1] \033[93mIRAN")
+            print("\033[97m7. \033[93mChisel \033[92mTCP \033[93m[IPV6] \033[92m[7] \033[93mKHAREJ\033[92m [1] \033[93mIRAN")
+            print("\033[97m8. \033[93mChisel \033[92mUDP \033[93m[IPV6] \033[92m[7] \033[93mKHAREJ\033[92m [1] \033[93mIRAN")
             print(border)
             
             display_notification("\033[92m[5] \033[96mIRAN \033[92m[1] \033[93mKharej\033[0m")
@@ -260,8 +260,10 @@ def kharej5_t():
     print('3. \033[93mKharej\033[92m [3] \033[0m')
     print('4. \033[93mKharej\033[92m [4] \033[0m')
     print('5. \033[93mKharej\033[92m [5] \033[0m')
+    print('6. \033[93mKharej\033[92m [6] \033[0m')
+    print('7. \033[93mKharej\033[92m [7] \033[0m')
     print("\033[93m───────────────────────────────────────\033[0m")
-    print('6. \033[96mIRAN \033[0m')
+    print('8. \033[96mIRAN \033[0m')
     print('0. \033[92mBack to main menu \033[0m')
 
     print("\033[93m───────────────────────────────────────\033[0m")
@@ -283,6 +285,12 @@ def kharej5_t():
             kharej_ipv4()
             break
         elif server_type == '6':
+            kharej_ipv4()
+            break
+        elif server_type == '7':
+            kharej_ipv4()
+            break
+        elif server_type == '8':
             iran_ipv4()
             break
         elif server_type == '0':
@@ -304,8 +312,10 @@ def kharej5_t6():
     print('3. \033[93mKharej\033[92m [3] \033[0m')
     print('4. \033[93mKharej\033[92m [4] \033[0m')
     print('5. \033[93mKharej\033[92m [5] \033[0m')
+    print('6. \033[93mKharej\033[92m [6] \033[0m')
+    print('7. \033[93mKharej\033[92m [7] \033[0m')
     print("\033[93m───────────────────────────────────────\033[0m")
-    print('6. \033[96mIRAN \033[0m')
+    print('8. \033[96mIRAN \033[0m')
     print('0. \033[92mBack to main menu \033[0m')
 
     print("\033[93m───────────────────────────────────────\033[0m")
@@ -327,6 +337,12 @@ def kharej5_t6():
             kharej_ipv6()
             break
         elif server_type == '6':
+            kharej_ipv6()
+            break
+        elif server_type == '7':
+            kharej_ipv6()
+            break
+        elif server_type == '8':
             iran_ipv6()
             break
         elif server_type == '0':
@@ -348,8 +364,10 @@ def kharej5_u():
     print('3. \033[93mKharej\033[92m [3] \033[0m')
     print('4. \033[93mKharej\033[92m [4] \033[0m')
     print('5. \033[93mKharej\033[92m [5] \033[0m')
+    print('6. \033[93mKharej\033[92m [6] \033[0m')
+    print('7. \033[93mKharej\033[92m [7] \033[0m')
     print("\033[93m───────────────────────────────────────\033[0m")
-    print('6. \033[96mIRAN \033[0m')
+    print('8. \033[96mIRAN \033[0m')
     print('0. \033[92mBack to main menu \033[0m')
 
     print("\033[93m───────────────────────────────────────\033[0m")
@@ -372,6 +390,12 @@ def kharej5_u():
             kharej_ipv4_udp()
             break
         elif server_type == '6':
+            kharej_ipv4_udp()
+            break
+        elif server_type == '7':
+            kharej_ipv4_udp()
+            break
+        elif server_type == '8':
             iran_ipv4_udp()
             break
         elif server_type == '0':
@@ -393,8 +417,10 @@ def kharej5_u6():
     print('3. \033[93mKharej\033[92m [3] \033[0m')
     print('4. \033[93mKharej\033[92m [4] \033[0m')
     print('5. \033[93mKharej\033[92m [5] \033[0m')
+    print('6. \033[93mKharej\033[92m [6] \033[0m')
+    print('7. \033[93mKharej\033[92m [7] \033[0m')
     print("\033[93m───────────────────────────────────────\033[0m")
-    print('6. \033[96mIRAN \033[0m')
+    print('8. \033[96mIRAN \033[0m')
     print('0. \033[92mBack to main menu \033[0m')
 
     print("\033[93m───────────────────────────────────────\033[0m")
@@ -417,6 +443,12 @@ def kharej5_u6():
             kharej_ipv6_udp()
             break
         elif server_type == '6':
+            kharej_ipv6_udp()
+            break
+        elif server_type == '7':
+            kharej_ipv6_udp()
+            break
+        elif server_type == '8':
             iran_ipv6_udp()
             break
         elif server_type == '0':

@@ -96,10 +96,50 @@ def display_logo2():
     print(logo2)
     
 def display_logo():
-    try:
-        subprocess.run(['/bin/bash', '/etc/logo.sh'], check=True)
-    except subprocess.CalledProcessError as e:
-        print(f"Error: {e}")
+    colorama.init()  
+    logo = """ 
+\033[1;96m          
+                 
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⠀⢀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⠀⡀⠤⠒⠊⠉⠀⠀⠀⠀⠈⠁⠢⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀\033[1;93m⠀⢀⠔⠉⠀⠀⠀⠀⢀⡠⠤⠐⠒⠀⠀⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⠀⣀⡠⠤⠤⠀⠀⠂⠐\033[1;96m⠀⠠⢤⠎⢑⡭⣽⣳⠶⣖⡶⣤⣖⣬⡽⡭⣥⣄\033[1;93m⠒⠒⠀⠐⠁⠑⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⢀⠴⠊⠁⠀⠀⠀⠀⡀⠀\033[1;96m⣠⣴⡶⣿⢏⡿⣝⡳⢧⡻⣟⡻⣞⠿⣾⡽⣳⣯⣳⣞⡻⣦⡀⠀⠀\033[1;93m⠀⠈⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⢨⠀⠀⠀⢀⠤⠂⠁\033[1;96m⢠⣾⡟⣧⠿⣝⣮⣽⢺⣝⣳⡽⣎⢷⣫⡟⡵⡿⣵⢫⡷⣾⢷⣭⢻⣦⡄\033[1;93m⠤⡸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠘⡄⠀⠀⠓⠂⠀\033[1;96m⣴⣿⢷⡿⣝⣻⣏⡷⣾⣟⡼⣣⢟⣼⣣⢟⣯⢗⣻⣽⣏⡾⡽⣟⣧⠿⡼⣿⣦\033[1;93m⣃⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⢀⠇⠀⠀⠀⠀\033[1;96m⣼⣿⢿⣼⡻⣼⡟⣼⣧⢿⣿⣸⡧⠿⠃⢿⣜⣻⢿⣤⣛⣿⢧⣻⢻⢿⡿⢧⣛⣿⣧⠀\033[1;93m⠛⠤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⢸⠁⠀⠀⠀⠀\033[1;96m⣼⣻⡿⣾⣳⡽⣾⣽⡷⣻⣞⢿⣫⠕⣫⣫⣸⢮⣝⡇⠱⣏⣾⣻⡽⣻⣮⣿⣻⡜⣞⡿⣷\033[1;93m⢀⠀⠀⠑⠢⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠘⣧⠀⠀⠀\033[1;96m⣼⣳⢯⣿⣗⣿⣏⣿⠆⣟⣿⣵⢛⣵⡿⣿⣏⣟⡾⣜⣻⠀⢻⡖⣷⢳⣏⡶⣻⡧⣟⡼⣻⡽⣇\033[1;93m⠁⠢⡀⠠⡀⠑⡄⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⠈⢦⠀\033[1;96m⣰⣯⣟⢯⣿⢾⣹⢾⡟⠰⣏⡾⣾⣟⡷⣿⣻⣽⣷⡶⣟⠿⡆⠀⢻⣝⣯⢷⣹⢧⣿⢧⡻⣽⣳⢽⡀\033[1;93m⠀⠈⠀⠈⠂⡼⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⠀⡀⢵\033[1;96m⣟⣾⡟⣾⣿⣻⢽⣺⠇⠀⣿⡱⢿⡞⣵⡳⣭⣿⡜⣿⣭⣻⣷⠲⠤⢿⣾⢯⢯⣛⢿⣳⡝⣾⣿⢭⡇⠀\033[1;93m⠀⠀⠀⡰⠁⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⢀⠤⠊⠀\033[1;96m⣼⢻⣿⢞⣯⢿⡽⣸⣹⡆⠀⢷⣏⢯⣿⣧⣛⠶⣯⢿⣽⣷⣧⣛⣦⠀⠀⠙⢿⣳⣽⣿⣣⢟⡶⣿⣫⡇⠀⠀\033[1;93m⠀⠰⠁⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⣠⠖⠁⠀⠀⡄\033[1;96m⡿⣯⣷⣻⡽⣞⡟⣿⣿⣟⠉⠈⢯⣗⣻⣕⢯⣛⡞⣯⢮⣷⣭⡚⠓⠋⠀⠀⠀⠈⠉⣿⡽⣎⠷⡏⡷⣷⠀⠀⠀\033[1;93m⠀⡇⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠐⣇⠀⠀⢀⠊\033[1;96m⣼⣇⣿⡗⣿⣽⣷⡿⣿⣱⡿⣆⠀⠀⠙⠒⠛⠓⠋⠉⠉⠀⠀⠀\033[1;91m⢠⣴⣯⣶⣶⣤⡀\033[1;96m ⠀⣿⣟⡼⣛⡇⣟⣿⡆\033[1;93m⡀⠀⢀⠇⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⠘⢤⠀⠃⠌\033[1;96m⣸⣿⢾⡽⣹⣾⠹⣞⡵⣳⣽⡽⣖⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\033[1;91m⣤⣖⣻⣾⣝⢿⡄\033[1;96m ⢸⣯⢳⣏⡿⣏⣾⢧\033[1;93m⠈⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⠘⠀⠈⠀\033[1;96m⡿⣿⣻⡽⣽⣿⢧⠌⠉\033[1;91m⠉⣴⣿⣿⣫⣅⡀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣛⠿⠿⢟⢙⡄⠙\033[1;96m ⠘⣯⢳⣞⡟⣯⢾⣻⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⡇⠀⠀⠀\033[1;96m⡿⣿⣿⢵⣫⣿⣆⠁⠂\033[1;91m⣼⡿⢹⣿⡿⠽⠟⢢⠀⠀⠀⠀⠀⠀⠀⢹⠀⢄⢀⠀⡿⠀⠀\033[1;96m ⢰⣯⢷⣺⣏⣯⢻⡽⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⡇⠀⢀⠠\033[1;96m⣿⣿⢾⣛⡶⣽⠈⢓⠀\033[1;91m⢻⠁⢸⠇⠀⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠑⠠⠤⠔⠂⠀⠀\033[1;96m ⢸⣿⢮⣽⠿⣜⣻⡝⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀\033[1;93m⠀⠑⠊⠁\033[1;96m⢠⡷⡇⣿⣿⢼⣹⡀⠀⠑⢄⠀\033[1;91m⠀⠃⠌⣁⠦⠟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠂⠀⠀\033[1;96m⢀⣿⢾⡝⣾⡽⣺⢽⣹⣽⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣻⢽⣻⡟⣮⣝⡷⢦⣄⣄⣢⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⣯⢿⡺⣟⢷⡹⢾⣷⡞⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣟⡿⣎⢿⡽⣳⢮⣿⣹⣾⣯⡝⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠃⠀⠀⠀⠀⠀⠀⣀⣴⡟⣿⢧⣏⢷⡟⣮⠝⢿⣹⣯⡽⣆⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣯⡷⣏⣾⡳⣽⢺⣷⡹⣟⢶⡹⣾⡽⣷⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠔⣾⢯⣷⡇⣿⢳⣎⢿⡞⣽⢦⣼⡽⣧⢻⡽⣆⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣟⢾⡷⣭⣿⢳⣭⢻⣷⡻⣜⣻⡵⣻⡼⣿⠾⠫\033[1;96m⣽⣟⣶⣶⣶⠒⠒⠂⠉⠀\033[1;96m⢸⣽⢺⡷⣷⣯⢗⣮⣟⢾⢧⣻⠼⡿⣿⢣⡟⣼⣆⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡾⣝⣾⢳⢧⣟⡳⣎⣿⣿⣱⢏⣾⣽⣳⠟\033[1;92m⠁⠀⡌⠈\033[1;96m⢹⡯⠟⠛⠀⠀⠀⠀⠀⠈\033[1;96m⣷⢻⣼⣽⣿⡾⣼⣏⣾⣻⡜⣯⣷⢿⣟⣼⡳⣞⣦⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣾⢿⡸⣎⠿⣾⡏⣷⣉⣷⣿⢹⣎⡿\033[1;92m⠎⡎⠀⠀⠀⡇⠀⣾⠱⡀⠀⠀⠀⠀⠀⠀⠀⠈⣹⠉⡏⠀\033[1;96m⠹⣾⣏⢹⣶⢹⣶⢿⡾⣿⢶⣿⣸⠾⣇⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⣠⣾⢫⣞⡽⣯⢿⣹⡟⣶⣹⢷⣻\033[1;92m⡷⠊⠀⡜⠀⠀⠀⠀⢱⠀⣿⡀⠈⠢⢀⣀⣀⠠⠄⠒⢈⡏⡰⠀⠀⠀\033[1;96m⠀⣿⡜⣮⢟⡼⣻⡵⣻⣗⠾⣟⣯⢻⣆⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⣴⣿⢣⣟⡾⣽⣯⢳⣿⡹⣖⣿⡳\033[1;92m⠋⠀⠀⡸⠀⠀⠀⠀⠀⢸⠀⢺⢂⠀⠀⠀⠀⠀⠀⠀⢠⡺⡱⠁⠀⠀⠀⠀\033[1;96m⢹⣧⣻⢮⡳⣝⡷⢧⣻⢯⢿⣻⣳⢞⡆⠀⠀⠀
+⠀⠀⠀⠀⢀⡾⣽⣣⡿⣼⣏⡿⣼⣳⡯⢷⣹⣯⠇\033[1;92m⠀⠀⢠⠁⠀⠀⠀⠀⠀⠈⡆⠈⢹⡰⠤⡀⠀⠀⠀⢠⡼⢱⠁⠀⠀⠀⠀⠀⠀\033[1;96m⠹⣿⣿⣱⣻⣼⣏⢷⣯⣿⡳⣿⣎⢿⡀⠀⠀
+⠀⠀⠀⠀⣾⣽⠷⣿⣵⡿⣼⡟⣭⣷⡟⣿⢯⡏⠀\033[1;92m⠀⠀⠘⠀⠀⠒⠈⢡⠀⠀⢗⢄⠀⠃⠀⠺⢁⢈⠥⠋⣀⠇⠀⠀⠀⠀⠀⠀⡀⠀\033[1;96m⠈⠙⢿⣳⢞⣽⢯⣞⣾⣯⡝⣿⡾⡇⠀⠀\033[1;92mAuthor: github.com/Azumi67  \033[1;96m  ⠀⠀
+
+  \033[96m  ______   \033[1;94m _______  \033[1;92m __    \033[1;93m  _______     \033[1;91m    __      \033[1;96m  _____  ___  
+ \033[96m  /    " \  \033[1;94m|   __ "\ \033[1;92m|" \  \033[1;93m  /"      \    \033[1;91m   /""\     \033[1;96m (\"   \|"  \ 
+ \033[96m // ____  \ \033[1;94m(. |__) :)\033[1;92m||  |  \033[1;93m|:        |   \033[1;91m  /    \   \033[1;96m  |.\\   \    |
+ \033[96m/  /    ) :)\033[1;94m|:  ____/ \033[1;92m|:  |  \033[1;93m|_____/   )   \033[1;91m /' /\  \   \033[1;96m |: \.   \\  |
+\033[96m(: (____/ // \033[1;94m(|  /     \033[1;92m|.  | \033[1;93m //       /   \033[1;91m //  __'  \  \033[1;96m |.  \    \ |
+ \033[96m\        / \033[1;94m/|__/ \   \033[1;92m/\  |\ \033[1;93m |:  __   \  \033[1;91m /   /  \\   \ \033[1;96m |    \    \|
+ \033[96m \"_____ / \033[1;94m(_______) \033[1;92m(__\_|_)\033[1;93m |__|  \___) \033[1;91m(___/    \___) \033[1;96m\___|\____\)
+"""
+    print(logo)
 def main_menu():
     try:
         while True:
@@ -132,13 +172,13 @@ def main_menu():
             print("4. \033[93mChisel \033[92mUDP\033[93m [IPV6]\033[0m")
             print(border)
             print("\033[93m─────────────────────────────────────────── \033[0m")
-            display_notification("\033[92m[5] \033[96mKharej \033[92m[1] \033[93mIRAN\033[0m")
+            display_notification("\033[92m[7] \033[96mKharej \033[92m[1] \033[93mIRAN\033[0m")
             print("\033[93m─────────────────────────────────────────── \033[0m")
-            print("5. \033[96mChisel \033[92mTCP \033[96m[IPV4] \033[92m[5] \033[96mKHAREJ\033[92m [1] \033[96mIRAN")
-            print("\033[97m6. \033[96mChisel \033[92mUDP \033[96m[IPV4] \033[92m[5] \033[96mKHAREJ\033[92m [1] \033[96mIRAN")
+            print("5. \033[96mChisel \033[92mTCP \033[96m[IPV4] \033[92m[7] \033[96mKHAREJ\033[92m [1] \033[96mIRAN")
+            print("\033[97m6. \033[96mChisel \033[92mUDP \033[96m[IPV4] \033[92m[7] \033[96mKHAREJ\033[92m [1] \033[96mIRAN")
             
-            print("\033[97m7. \033[93mChisel \033[92mTCP \033[93m[IPV6] \033[92m[5] \033[93mKHAREJ\033[92m [1] \033[93mIRAN")
-            print("\033[97m8. \033[93mChisel \033[92mUDP \033[93m[IPV6] \033[92m[5] \033[93mKHAREJ\033[92m [1] \033[93mIRAN")
+            print("\033[97m7. \033[93mChisel \033[92mTCP \033[93m[IPV6] \033[92m[7] \033[93mKHAREJ\033[92m [1] \033[93mIRAN")
+            print("\033[97m8. \033[93mChisel \033[92mUDP \033[93m[IPV6] \033[92m[7] \033[93mKHAREJ\033[92m [1] \033[93mIRAN")
             print(border)
             
             display_notification("\033[92m[5] \033[96mIRAN \033[92m[1] \033[93mKharej\033[0m")
@@ -220,8 +260,10 @@ def kharej5_t():
     print('3. \033[93mKharej\033[92m [3] \033[0m')
     print('4. \033[93mKharej\033[92m [4] \033[0m')
     print('5. \033[93mKharej\033[92m [5] \033[0m')
+    print('6. \033[93mKharej\033[92m [6] \033[0m')
+    print('7. \033[93mKharej\033[92m [7] \033[0m')
     print("\033[93m───────────────────────────────────────\033[0m")
-    print('6. \033[96mIRAN \033[0m')
+    print('8. \033[96mIRAN \033[0m')
     print('0. \033[92mBack to main menu \033[0m')
 
     print("\033[93m───────────────────────────────────────\033[0m")
@@ -243,6 +285,12 @@ def kharej5_t():
             kharej_ipv4()
             break
         elif server_type == '6':
+            kharej_ipv4()
+            break
+        elif server_type == '7':
+            kharej_ipv4()
+            break
+        elif server_type == '8':
             iran_ipv4()
             break
         elif server_type == '0':
@@ -264,8 +312,10 @@ def kharej5_t6():
     print('3. \033[93mKharej\033[92m [3] \033[0m')
     print('4. \033[93mKharej\033[92m [4] \033[0m')
     print('5. \033[93mKharej\033[92m [5] \033[0m')
+    print('6. \033[93mKharej\033[92m [6] \033[0m')
+    print('7. \033[93mKharej\033[92m [7] \033[0m')
     print("\033[93m───────────────────────────────────────\033[0m")
-    print('6. \033[96mIRAN \033[0m')
+    print('8. \033[96mIRAN \033[0m')
     print('0. \033[92mBack to main menu \033[0m')
 
     print("\033[93m───────────────────────────────────────\033[0m")
@@ -287,6 +337,12 @@ def kharej5_t6():
             kharej_ipv6()
             break
         elif server_type == '6':
+            kharej_ipv6()
+            break
+        elif server_type == '7':
+            kharej_ipv6()
+            break
+        elif server_type == '8':
             iran_ipv6()
             break
         elif server_type == '0':
@@ -308,8 +364,10 @@ def kharej5_u():
     print('3. \033[93mKharej\033[92m [3] \033[0m')
     print('4. \033[93mKharej\033[92m [4] \033[0m')
     print('5. \033[93mKharej\033[92m [5] \033[0m')
+    print('6. \033[93mKharej\033[92m [6] \033[0m')
+    print('7. \033[93mKharej\033[92m [7] \033[0m')
     print("\033[93m───────────────────────────────────────\033[0m")
-    print('6. \033[96mIRAN \033[0m')
+    print('8. \033[96mIRAN \033[0m')
     print('0. \033[92mBack to main menu \033[0m')
 
     print("\033[93m───────────────────────────────────────\033[0m")
@@ -332,6 +390,12 @@ def kharej5_u():
             kharej_ipv4_udp()
             break
         elif server_type == '6':
+            kharej_ipv4_udp()
+            break
+        elif server_type == '7':
+            kharej_ipv4_udp()
+            break
+        elif server_type == '8':
             iran_ipv4_udp()
             break
         elif server_type == '0':
@@ -353,8 +417,10 @@ def kharej5_u6():
     print('3. \033[93mKharej\033[92m [3] \033[0m')
     print('4. \033[93mKharej\033[92m [4] \033[0m')
     print('5. \033[93mKharej\033[92m [5] \033[0m')
+    print('6. \033[93mKharej\033[92m [6] \033[0m')
+    print('7. \033[93mKharej\033[92m [7] \033[0m')
     print("\033[93m───────────────────────────────────────\033[0m")
-    print('6. \033[96mIRAN \033[0m')
+    print('8. \033[96mIRAN \033[0m')
     print('0. \033[92mBack to main menu \033[0m')
 
     print("\033[93m───────────────────────────────────────\033[0m")
@@ -377,6 +443,12 @@ def kharej5_u6():
             kharej_ipv6_udp()
             break
         elif server_type == '6':
+            kharej_ipv6_udp()
+            break
+        elif server_type == '7':
+            kharej_ipv6_udp()
+            break
+        elif server_type == '8':
             iran_ipv6_udp()
             break
         elif server_type == '0':
@@ -806,7 +878,8 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
+LimitNOFILE=1048576
 User=root
 
 [Install]
@@ -819,7 +892,7 @@ WantedBy=multi-user.target
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
 
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mIRAN service started successfully!\033[0m")
 
@@ -835,9 +908,11 @@ def iran_ipv4():
     if not os.path.isfile("/root/chisel"):
         chisel_mnu()
     forward()
+    
     print("\033[93m───────────────────────────\033[0m")
     display_notification("\033[93mConfiguring \033[96mIRAN\033[0m")
     print("\033[93m───────────────────────────\033[0m")
+    res_chisel2()
 
     key_directory = "/etc/chisel"
     try:
@@ -862,6 +937,7 @@ def iran_ipv4():
         iran_tcp(host, key_path, int(port))
     except Exception as e:
          display_error("An error occurred: {}".format(str(e)))
+    
 
 def kharej_tc(server_number, config_number, iran_ipv4, kharej_port, df_port=443):
     service_name = f"kharej_{server_number}_{config_number}"
@@ -875,8 +951,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -887,7 +964,8 @@ WantedBy=multi-user.target
             file.write(service_content)
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
+
         display_checkmark(f"\033[92mKharej service {config_number} (Server {server_number}) started successfully!\033[0m")
 
         subprocess.run(f"systemctl enable {service_name}", shell=True, check=True)
@@ -901,9 +979,11 @@ def config_kharej():
         if not os.path.isfile("/root/chisel"):
             chisel_mnu()
         forward()
+        
         print("\033[93m───────────────────────────\033[0m")
         display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
         print("\033[93m───────────────────────────\033[0m")
+        
         server_configs = []
 
         for i in range(1, num_servers + 1):
@@ -923,7 +1003,7 @@ def config_kharej():
 
             for j, (kharej_port, df_port) in enumerate(configs, start=1):
                 kharej_tc(i, j, iran_ipv4, int(kharej_port), int(df_port))
-
+            res_chisel3()
             print("\033[93m╭──────────────────────────────────────────────────────────────────────╮\033[0m")
             for j, (kharej_port, df_port) in enumerate(configs, start=1):
                 print(f"\033[93m| Server {i} - Config {j}: Your Address & Port: {iran_ipv4} : {kharej_port}  \033[0m")
@@ -949,8 +1029,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -962,7 +1043,7 @@ WantedBy=multi-user.target
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
 
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mKharej service {} started successfully!\033[0m".format(config_number))
 
@@ -979,9 +1060,11 @@ def kharej_ipv4():
     if not os.path.isfile("/root/chisel"):
         chisel_mnu()
     forward()
+    
     print("\033[93m───────────────────────────\033[0m")
     display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
     print("\033[93m───────────────────────────\033[0m")
+    
     num_configs = int(input("\033[93mEnter the \033[92mnumber\033[93m of \033[96mKharej\033[93m Configs: \033[0m"))
     iran_ipv4 = input("\033[93mEnter \033[92mIRAN\033[96m IPV4\033[93m address: \033[0m")
     tunnel_port = input("\033[93mEnter \033[92mTunnel port\033[93m (default: 443): \033[0m") or "443"
@@ -995,7 +1078,7 @@ def kharej_ipv4():
         server_ports.append(kharej_port)
 
         kharej_tcp(i, iran_ipv4, kharej_port, tunnel_port)
-
+    res_chisel1()
     print("\033[93m╭─────────────────────────────────────────────────────────╮\033[0m")
     for i in range(num_configs):
         print(f"\033[93m| Config {i+1} - Your Address & Port: {iran_ipv4} : {server_ports[i]}  \033[0m")
@@ -1015,8 +1098,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1027,7 +1111,7 @@ WantedBy=multi-user.target
             file.write(service_content)
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mIRAN service started successfully!\033[0m")
 
@@ -1042,10 +1126,11 @@ def iran_ipv6():
     if not os.path.isfile("/root/chisel"):
         chisel_mnu()
     forward()
+    
     print("\033[93m───────────────────────────\033[0m")
     display_notification("\033[93mConfiguring \033[96mIRAN\033[0m")
     print("\033[93m───────────────────────────\033[0m")
-
+    res_chisel2()
     key_directory = "/etc/chisel"
     try:
         os.makedirs(key_directory, exist_ok=True)
@@ -1060,6 +1145,7 @@ def iran_ipv6():
     key_path = f"{key_directory}/chisel_key_1.key"
     chisel_key(key_path)
     iran_tcp2(host, key_path, tunnel_port)
+    
 
 def kharej_tc2(config_number, server_number, iran_ipv6, kharej_port, tunnel_port=443):
     service_name = f"kharej_{server_number}_{config_number}"
@@ -1073,8 +1159,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1085,7 +1172,7 @@ WantedBy=multi-user.target
             file.write(service_content)
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
         display_checkmark("\033[92mKharej service {}/{} started successfully!\033[0m".format(server_number, config_number))
 
         subprocess.run(f"systemctl enable {service_name}", shell=True, check=True)
@@ -1100,6 +1187,7 @@ def config_kharej6():
             chisel_mnu()
         
         forward()
+        
         print("\033[93m───────────────────────────\033[0m")
         display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
         print("\033[93m───────────────────────────\033[0m")
@@ -1123,7 +1211,7 @@ def config_kharej6():
 
                 tunnel_port = input("\033[93mEnter \033[92mTunnel Port\033[93m (default: 443): \033[0m") or "443"
                 kharej_tc2(j, i, iran_ipv6, kharej_port, tunnel_port)
-
+            res_chisel3()
             print("\033[93m╭──────────────────────────────────────────────────────────────────────╮\033[0m")
             for j, config_port in enumerate(configs, start=1):
                 print(f"\033[93m| Server {i} - Config {j}: Your Address & Port: {iran_ipv4} : {config_port}  \033[0m")
@@ -1150,8 +1238,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1163,7 +1252,7 @@ WantedBy=multi-user.target
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
 
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mKharej service {} started successfully!\033[0m".format(config_number))
 
@@ -1180,9 +1269,11 @@ def kharej_ipv6():
         chisel_mnu()
     
     forward()
+    
     print("\033[93m───────────────────────────\033[0m")
     display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
     print("\033[93m───────────────────────────\033[0m")
+    
     num_configs = int(input("\033[93mEnter the \033[92mnumber\033[93m of \033[96mKharej\033[93m Configs: \033[0m"))
     iran_ipv4 = input("\033[93mEnter \033[92mIRAN\033[96m IPV4\033[93m address: \033[0m")
     iran_ipv6 = input("\033[93mEnter \033[92mIRAN\033[96m IPV6\033[93m address: \033[0m")
@@ -1197,7 +1288,7 @@ def kharej_ipv6():
         server_ports.append(kharej_port)
 
         kharej_tcp2(i, iran_ipv6, kharej_port, tunnel_port)
-
+    res_chisel1()
     print("\033[93m╭─────────────────────────────────────────────────────────╮\033[0m")
     for i in range(num_configs):
         print(f"\033[93m| Config {i+1} - Your Address & Port: {iran_ipv4} : {server_ports[i]}  \033[0m")
@@ -1218,8 +1309,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1230,7 +1322,7 @@ WantedBy=multi-user.target
             file.write(service_content)
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mIRAN service started successfully!\033[0m")
 
@@ -1247,10 +1339,11 @@ def iran_ipv4_udp():
         chisel_mnu()
 
     forward()
+    
     print("\033[93m───────────────────────────\033[0m")
     display_notification("\033[93mConfiguring \033[96mIRAN\033[0m")
     print("\033[93m───────────────────────────\033[0m")
-
+    res_chisel2()
     key_directory = "/etc/chisel"
     try:
         if os.path.exists(key_directory):
@@ -1277,6 +1370,7 @@ def iran_ipv4_udp():
             display_error("Failed to generate key: Error: {}".format(str(e)))
     except Exception as e:
         display_error("An error occurred while making dir: {}".format(str(e)))
+    
 
 
 def kharej_udp(config_number, iran_ipv4, kharej_port, tunnel_port=443):
@@ -1291,8 +1385,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1304,7 +1399,7 @@ WantedBy=multi-user.target
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
 
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mKharej service {} started successfully!\033[0m".format(config_number))
 
@@ -1321,9 +1416,11 @@ def kharej_ipv4_udp():
         chisel_mnu()
     
     forward()
+    
     print("\033[93m───────────────────────────\033[0m")
     display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
     print("\033[93m───────────────────────────\033[0m")
+    
     num_configs = int(input("\033[93mEnter the \033[92mnumber\033[93m of \033[96mKharej\033[93m Configs: \033[0m"))
     iran_ipv4 = input("\033[93mEnter \033[92mIRAN\033[96m IPV4\033[93m address: \033[0m")
     tunnel_port = input("\033[93mEnter \033[92mTunnel\033[96m port\033[93m [Default: 443]: \033[0m") or "443"
@@ -1337,7 +1434,7 @@ def kharej_ipv4_udp():
         server_ports.append(kharej_port)
 
         kharej_udp(i, iran_ipv4, kharej_port, tunnel_port)
-
+    res_chisel1()
     print("\033[93m╭─────────────────────────────────────────────────────────╮\033[0m")
     for i in range(num_configs):
         print(f"\033[93m| Config {i+1} - Your Address & Port: {iran_ipv4} : {server_ports[i]}  \033[0m")
@@ -1357,8 +1454,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1369,7 +1467,7 @@ WantedBy=multi-user.target
             file.write(service_content)
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
         display_checkmark("\033[92mKharej service {}/{} started successfully!\033[0m".format(server_number, config_number))
 
         subprocess.run(f"systemctl enable {service_name}", shell=True, check=True)
@@ -1388,7 +1486,7 @@ def config_ud6():
         print("\033[93m───────────────────────────\033[0m")
         display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
         print("\033[93m───────────────────────────\033[0m")
-
+        
         num_servers = int(input("\033[93mEnter the number of \033[92mIRAN\033[93m servers:\033[0m "))
         server_configs = []
 
@@ -1409,7 +1507,7 @@ def config_ud6():
                 configs.append(kharej_port)
 
                 kharej_ud6(j, i, iran_ipv6, kharej_port, tunnel_port)
-
+            res_chisel3()
             print("\033[93m╭──────────────────────────────────────────────────────────────────────╮\033[0m")
             for j, config_port in enumerate(configs, start=1):
                 print(f"\033[93m| Server {i} - Config {j}: Your Address & Port: {iran_ipv4} : {config_port}  \033[0m")
@@ -1423,6 +1521,41 @@ def config_ud6():
 
     return server_configs
     
+def res_chisel3():
+    delete_cron()
+    if subprocess.call("test -f /etc/reschisel.sh", shell=True) == 0:
+        subprocess.call("rm /etc/reschisel.sh", shell=True)
+
+    with open("/etc/reschisel.sh", "w") as f:
+        f.write("#!/bin/bash\n")
+        f.write("systemctl daemon-reload\n")
+        f.write("sudo sync; echo 1 > /proc/sys/vm/drop_caches\n")
+        f.write("sudo journalctl --vacuum-size=1M\n")
+        print("\033[93m────────────────────────\033[0m") 
+        num_configs = int(input("\033[93mEnter\033[92m number of configs\033[93m[For 2 Hours Reset timer]:\033[0m "))
+        for i in range(1, num_configs + 1):
+            f.write(f"systemctl restart kharej_1_{i}\n")  
+            f.write(f"systemctl restart kharej_2_{i}\n") 
+            f.write(f"systemctl restart kharej_3_{i}\n")
+            f.write(f"systemctl restart kharej_4_{i}\n")
+            f.write(f"systemctl restart kharej_5_{i}\n")            
+
+    subprocess.call("chmod +x /etc/reschisel.sh", shell=True)
+    hours = "2"
+    cron_entry = f"0 */{hours} * * * /etc/reschisel.sh"
+    existing_crontab = ""
+    try:
+        existing_crontab = subprocess.check_output("crontab -l", shell=True).decode()
+    except subprocess.CalledProcessError:
+        display_error("\033[91mNo existing cron found!\033[0m")
+
+    new_crontab = f"{existing_crontab.rstrip()}\n{cron_entry}"
+    try:
+        subprocess.check_output(f'echo "{new_crontab}" | crontab -', shell=True)
+        print("Cron entry added successfully!")
+    except subprocess.CalledProcessError as e:
+        display_error(f"Failed to add cron entry. Error: {e}")
+        
 def kharej_ud(config_number, server_number, iran_ipv4, kharej_port, tunnel_port=443):
     service_name = f"kharej_{server_number}_{config_number}"
     service_file = f"/etc/systemd/system/{service_name}.service"
@@ -1435,8 +1568,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1447,7 +1581,7 @@ WantedBy=multi-user.target
             file.write(service_content)
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
         display_checkmark("\033[92mKharej service {}/{} started successfully!\033[0m".format(server_number, config_number))
 
         subprocess.run(f"systemctl enable {service_name}", shell=True, check=True)
@@ -1465,6 +1599,7 @@ def config_kha_udp():
         print("\033[93m───────────────────────────\033[0m")
         display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
         print("\033[93m───────────────────────────\033[0m")
+        
         server_configs = []
 
         for i in range(1, num_servers + 1):
@@ -1483,7 +1618,7 @@ def config_kha_udp():
 
             for j, config_port in enumerate(configs, start=1):
                 kharej_ud(j, i, iran_ipv4, config_port, tunnel_port)
-
+            res_chisel3()
             print("\033[93m╭───────────────────────────────────────────────────────────────────────────────────╮\033[0m")
             for j, config_port in enumerate(configs, start=1):
                 print(f"\033[93m| Server {i} - Config {j}: Your Address & Port: {iran_ipv4} : {config_port}  \033[0m")
@@ -1497,6 +1632,35 @@ def config_kha_udp():
         kharej_ip4(num_iran_servers, tunnel_port)
     else:
         print("\033[91mNo Iran servers, so I'm giving up..\033[0m")
+
+def res_chisel2():
+    delete_cron()
+    if subprocess.call("test -f /etc/reschisel.sh", shell=True) == 0:
+        subprocess.call("rm /etc/reschisel.sh", shell=True)
+
+    with open("/etc/reschisel.sh", "w") as f:
+        f.write("#!/bin/bash\n")
+        f.write("sudo systemctl daemon-reload\n")
+        f.write("sudo systemctl restart iran_1\n")
+        f.write("sudo sync; echo 1 > /proc/sys/vm/drop_caches\n")
+        f.write("sudo journalctl --vacuum-size=1M\n")
+
+    subprocess.call("chmod +x /etc/reschisel.sh", shell=True)
+    hours = "2"
+    cron_entry = f"0 */{hours} * * * /etc/reschisel.sh"
+    existing_crontab = ""
+
+    try:
+        existing_crontab = subprocess.check_output("crontab -l", shell=True).decode()
+    except subprocess.CalledProcessError:
+        display_error("\033[91mNo existing cron found!\033[0m")
+
+    new_crontab = f"{existing_crontab.rstrip()}\n{cron_entry}"
+    try:
+        subprocess.check_output(f'echo "{new_crontab}" | crontab -', shell=True)
+        print("Cron entry added successfully!")
+    except subprocess.CalledProcessError as e:
+        display_error(f"Failed to add cron entry. Error: {e}")
         
 def iran_udp2(host, key_path, tunnel_port=443):
     service_name = "iran_1"
@@ -1510,8 +1674,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1522,7 +1687,7 @@ WantedBy=multi-user.target
             file.write(service_content)
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mIRAN service started successfully!\033[0m")
 
@@ -1541,6 +1706,7 @@ def iran_ipv6_udp():
     print("\033[93m───────────────────────────\033[0m")
     display_notification("\033[93mConfiguring \033[96mIRAN\033[0m")
     print("\033[93m───────────────────────────\033[0m")
+    res_chisel2()
 
     key_directory = "/etc/chisel"
     try:
@@ -1565,6 +1731,39 @@ def iran_ipv6_udp():
 
     except Exception as e:
         display_error("An error occurred: {}".format(str(e)))
+    
+        
+def res_chisel1():
+    delete_cron()
+    if subprocess.call("test -f /etc/reschisel.sh", shell=True) == 0:
+        subprocess.call("rm /etc/reschisel.sh", shell=True)
+
+    with open("/etc/reschisel.sh", "w") as f:
+        f.write("#!/bin/bash\n")
+        f.write("systemctl daemon-reload\n")
+        f.write("sudo sync; echo 1 > /proc/sys/vm/drop_caches\n")
+        f.write("sudo journalctl --vacuum-size=1M\n")
+        print("\033[93m────────────────────────\033[0m") 
+        num_configs = int(input("\033[93mEnter\033[92m number of configs\033[93m[For 2 Hours Reset timer]:\033[0m "))
+        for i in range(1, num_configs + 1):
+            config_name = f"kharej_{i}"
+            f.write(f"systemctl restart {config_name}\n")
+
+    subprocess.call("chmod +x /etc/reschisel.sh", shell=True)
+    hours = "2"
+    cron_entry = f"0 */{hours} * * * /etc/reschisel.sh"
+    existing_crontab = ""
+    try:
+        existing_crontab = subprocess.check_output("crontab -l", shell=True).decode()
+    except subprocess.CalledProcessError:
+        display_error("\033[91mNo existing cron found!\033[0m")
+
+    new_crontab = f"{existing_crontab.rstrip()}\n{cron_entry}"
+    try:
+        subprocess.check_output(f'echo "{new_crontab}" | crontab -', shell=True)
+        print("Cron entry added successfully!")
+    except subprocess.CalledProcessError as e:
+        display_error(f"Failed to add cron entry. Error: {e}")
         
 def kharej_udp2(config_number, iran_ipv4, iran_ipv6, kharej_port, tunnel_port=443):
     service_name = f"kharej_{config_number}"
@@ -1578,8 +1777,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1591,7 +1791,7 @@ WantedBy=multi-user.target
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
 
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mKharej service {} started successfully!\033[0m".format(config_number))
 
@@ -1602,7 +1802,29 @@ WantedBy=multi-user.target
     except subprocess.CalledProcessError as e:
         display_error("\033[91mFailed in creating Kharej service {}. Error: {}\033[0m".format(config_number, e.output))
 
+def delete_cron():
+    entries_to_delete = [
+        "0 */2 * * * /etc/reschisel.sh"
+    ]
 
+    existing_crontab = ""
+    try:
+        existing_crontab = subprocess.check_output("crontab -l", shell=True).decode()
+    except subprocess.CalledProcessError:
+        display_error("\033[91mNo existing cron found!\033[0m")
+        return
+
+    new_crontab = existing_crontab
+    for entry in entries_to_delete:
+        if entry in existing_crontab:
+            new_crontab = new_crontab.replace(entry, "")
+
+    if new_crontab != existing_crontab:
+        subprocess.call(f"echo '{new_crontab}' | crontab -", shell=True)
+        display_notification("\033[92mDeleting Previous Crons..\033[0m")
+    else:
+        print("\033[91mCron doesn't exists, moving on..!\033[0m")        
+        
 def kharej_ipv6_udp():
     if not os.path.isfile("/root/chisel"):
         chisel_mnu()
@@ -1611,6 +1833,7 @@ def kharej_ipv6_udp():
     print("\033[93m───────────────────────────\033[0m")
     display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
     print("\033[93m───────────────────────────\033[0m")
+    
     num_configs = int(input("\033[93mEnter the \033[92mnumber\033[93m of \033[96mKharej\033[93m Configs: \033[0m"))
 
     iran_ipv4 = input("\033[93mEnter \033[92mIRAN\033[96m IPV4\033[93m address: \033[0m")
@@ -1626,7 +1849,7 @@ def kharej_ipv6_udp():
         server_ports.append(kharej_port)
 
         kharej_udp2(i, iran_ipv4, iran_ipv6, kharej_port, tunnel_port)
-
+    res_chisel1()
     print("\033[93m╭─────────────────────────────────────────────────────────╮\033[0m")
     for i in range(num_configs):
         print(f"\033[93m| Config {i+1} - Your Address & Port: {iran_ipv4} : {server_ports[i]}  \033[0m")
@@ -1670,8 +1893,9 @@ After=network.target
 [Service]
 ExecStart=/bin/bash /etc/ping.sh
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1683,7 +1907,7 @@ WantedBy=multi-user.target
 
     subprocess.run(['systemctl', 'daemon-reload'])
     subprocess.run(['systemctl', 'enable', 'ping.service'])
-    subprocess.run(['systemctl', 'start', 'ping.service'])
+    subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/ping.service'])
     sleep(1)
     subprocess.run(['systemctl', 'restart', 'ping.service'])
     
@@ -1713,6 +1937,7 @@ def kharej_private_menu():
         f.write(f"ip tunnel add azumich mode sit remote {remote_ip} local {local_ip} ttl 255\n")
         f.write("ip link set dev azumich up\n")
         f.write("ip addr add fd1d:fc98:b63e:b481::1/64 dev azumich\n")
+        f.write("ip -6 route add fd1d:fc98:b63e:b481::2/64 dev azumich\n")
 
     display_checkmark("\033[92mPrivate ip added successfully!\033[0m")
 
@@ -1791,6 +2016,7 @@ def iran_private_menu():
         f.write(f"ip tunnel add azumich mode sit remote {remote_ip} local {local_ip} ttl 255\n")
         f.write("ip link set dev azumich up\n")
         f.write("ip addr add fd1d:fc98:b63e:b481::2/64 dev azumich\n")
+        f.write("ip -6 route add fd1d:fc98:b63e:b481::1/64 dev azumich\n")
 
     
     display_checkmark("\033[92mPrivate ip added successfully!\033[0m")
@@ -1861,8 +2087,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1873,7 +2100,7 @@ WantedBy=multi-user.target
             file.write(service_content)
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mIRAN service started successfully!\033[0m")
 
@@ -1893,6 +2120,7 @@ def irpri_ipv6():
     print("\033[93m───────────────────────────\033[0m")
     display_notification("\033[93mConfiguring \033[96mIRAN\033[0m")
     print("\033[93m───────────────────────────\033[0m")
+    res_chisel2()
     interface_check = subprocess.run(["ip", "link", "show", "azumich"], capture_output=True, text=True)
     if "azumich" in interface_check.stdout:
         print("\033[96mazumich interface is available.\033[0m")
@@ -1922,6 +2150,7 @@ def irpri_ipv6():
         iran_tcp3(key_path, tunnel_port)
     except Exception as e:
         display_error("An error occurred: {}".format(str(e)))
+    
         
         
         
@@ -1937,8 +2166,9 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
 User=root
+LimitNOFILE=1048576
 
 [Install]
 WantedBy=multi-user.target
@@ -1950,7 +2180,7 @@ WantedBy=multi-user.target
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
 
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mKharej service {} started successfully!\033[0m".format(config_number))
 
@@ -1969,6 +2199,7 @@ def khpri_ipv6():
     print("\033[93m───────────────────────────\033[0m")
     display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
     print("\033[93m───────────────────────────\033[0m")
+    
     interface_check = subprocess.run(["ip", "link", "show", "azumich"], capture_output=True, text=True)
     if "azumich" in interface_check.stdout:
         print("\033[96mazumich interface is available.\033[0m")
@@ -1989,7 +2220,7 @@ def khpri_ipv6():
         server_ports.append(kharej_port)
 
         khpri_tcp2(i, kharej_port, tunnel_port)
-
+    res_chisel1()
     print("\033[93m╭─────────────────────────────────────────────────────────╮\033[0m")
     for i in range(num_configs):
         print(f"\033[93m| Config {i+1} - Your Address & Port: {remote_ip} : {server_ports[i]}  \033[0m")
@@ -2012,7 +2243,8 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
+LimitNOFILE=1048576
 User=root
 
 [Install]
@@ -2024,7 +2256,7 @@ WantedBy=multi-user.target
             file.write(service_content)
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mIRAN service started successfully!\033[0m")
 
@@ -2044,6 +2276,7 @@ def irpri_ipv6_udp():
     print("\033[93m───────────────────────────\033[0m")
     display_notification("\033[93mConfiguring \033[96mIRAN\033[0m")
     print("\033[93m───────────────────────────\033[0m")
+    res_chisel2()
     interface_check = subprocess.run(["ip", "link", "show", "azumich"], capture_output=True, text=True)
     if "azumich" in interface_check.stdout:
         print("\033[96mazumich interface is available.\033[0m")
@@ -2073,6 +2306,7 @@ def irpri_ipv6_udp():
         iran_udp3(key_path, tunnel_port)
     except Exception as e:
         display_error("An error occurred: {}".format(str(e)))
+    
         
         
         
@@ -2088,7 +2322,8 @@ After=network.target
 [Service]
 ExecStart=/root/{chisel_command}
 Restart=always
-RestartSec=10
+RestartSec=5
+LimitNOFILE=1048576
 User=root
 
 [Install]
@@ -2101,7 +2336,7 @@ WantedBy=multi-user.target
 
         subprocess.run("systemctl daemon-reload", shell=True, check=True)
 
-        subprocess.run(f"systemctl start {service_name}", shell=True, check=True)
+        subprocess.run(['sudo', 'chmod', 'u+x', '/etc/systemd/system/{}.service'.format(service_name)], check=True)
 
         display_checkmark("\033[92mKharej service {config_number} started successfully!\033[0m")
 
@@ -2120,6 +2355,7 @@ def khpri_ipv6_udp():
     print("\033[93m───────────────────────────\033[0m")
     display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
     print("\033[93m───────────────────────────\033[0m")
+    
     interface_check = subprocess.run(["ip", "link", "show", "azumich"], capture_output=True, text=True)
     if "azumich" in interface_check.stdout:
         print("\033[96mazumich interface is available.\033[0m")
@@ -2138,7 +2374,7 @@ def khpri_ipv6_udp():
         server_ports.append(kharej_port)
 
         kharej_udp3(i, kharej_port, tunnel_port)
-
+    res_chisel1()
     print("\033[93m╭─────────────────────────────────────────────────────────╮\033[0m")
     for i in range(num_configs):
         print(f"\033[93m| Config {i+1} - Your Address & Port: {remote_ip} : {server_ports[i]}  \033[0m")
@@ -2190,7 +2426,11 @@ def chisel2_status():
 
     services = {
         'iran': 'iran',
-        'kharej': 'kharej_1'
+        'kharej': 'kharej_1',
+        'kharej': 'kharej_2',
+        'kharej': 'kharej_3',
+        'kharej': 'kharej_4',
+        'kharej': 'kharej_5'
     }
 
     print("\033[93m            ╔════════════════════════════════════════════╗\033[0m")
@@ -2345,6 +2585,7 @@ def remove_chisel3():
     os.system("clear")
     display_notification("\033[93mRemoving \033[92mChisel\033[93m Multiple Servers\033[0m")
     print("\033[93m───────────────────────────────────────\033[0m")
+    delete_cron()
 
     try:
         if subprocess.call("test -f /root/chisel", shell=True) == 0:
@@ -2389,6 +2630,7 @@ def remove_chisel():
     os.system("clear")
     display_notification("\033[93mRemoving \033[92mChisel\033[93m ...\033[0m")
     print("\033[93m───────────────────────────────────────\033[0m")
+    delete_cron()
 
     try:
         if subprocess.call("test -f /root/chisel", shell=True) == 0:
@@ -2475,6 +2717,7 @@ def remove_chisel2():
     os.system("clear")
     display_notification("\033[93mRemoving Chisel + Private IP ...\033[0m")
     print("\033[93m───────────────────────────────────────\033[0m")
+    delete_cron()
     remove_private()
     try:
         if subprocess.call("test -f /root/chisel", shell=True) == 0:

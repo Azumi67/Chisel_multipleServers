@@ -162,6 +162,7 @@ def main_menu():
             print("0. \033[92mStatus Menu\033[0m")
             print("15.\033[94mStop | Restart Service \033[0m")
             print("16.\033[91mUninstall\033[0m")
+            print("17.\033[93mEdit \033[92mReset Timer\033[0m")
             print("\033[93m─────────────────────────────────────────── \033[0m")
             display_notification("\033[93mSingle Server\033[0m")
             print("\033[93m─────────────────────────────────────────── \033[0m")
@@ -234,6 +235,8 @@ def main_menu():
                 start_serv()
             elif choice == '16':
                 uni_menu() 
+            elif choice == '17':
+                time()
             elif choice == 'q':
                 print("Exiting...")
                 break
@@ -246,7 +249,75 @@ def main_menu():
         display_error("\033[91m\nProgram interrupted. Exiting...\033[0m")
         sys.exit()
  
+def time():
+    os.system("clear")
+    print('\033[92m ^ ^\033[0m')
+    print('\033[92m(\033[91mO,O\033[92m)\033[0m')
+    print('\033[92m(   ) \033[96mReset Timer\033[0m')
+    print('\033[92m "-"\033[93m════════════════════════════════════\033[0m')
+    print("\033[93m───────────────────────────────────────\033[0m")
+    print('1. \033[93mHour \033[0m')
+    print('2. \033[92mMinutes \033[0m')
+    print('0. \033[34mBack to main menu \033[0m')
 
+    print("\033[93m───────────────────────────────────────\033[0m")
+
+    while True:
+        server_type = input('\033[38;5;205mEnter your choice Please: \033[0m')
+        if server_type == '1':
+            hour()
+            break
+        elif server_type == '2':
+            minutes()
+            break
+        elif server_type == '0':
+            os.system("clear")
+            main_menu()
+            break
+        else:
+            print('Invalid choice.') 
+            
+def hour():
+   
+    hours = int(input("\033[93mEnter the \033[92mReset Timer\033[93m [in hours]:\033[0m "))
+    delete_cron()
+    delete_cron2()
+
+    if hours == 1:
+        cron_entry = "0 * * * * /etc/reschisel.sh"
+    else:
+        cron_entry = f"0 */{hours} * * * /etc/reschisel.sh"
+
+    try:
+        existing_crontab = subprocess.check_output("crontab -l", shell=True).decode()
+    except subprocess.CalledProcessError:
+        print("\033[91mNo existing cron found!\033[0m")
+
+    new_crontab = f"{existing_crontab.rstrip()}\n{cron_entry}"
+    try:
+        subprocess.check_output(f'echo "{new_crontab}" | crontab -', shell=True)
+        display_checkmark("\033[92mCron entry added successfully!\033[0m")
+    except subprocess.CalledProcessError as e:
+        display_error(f"Failed to add cron entry. Error: {e}")
+
+def minutes():
+    minutes = int(input("\033[93mEnter the \033[92mReset Timer\033[93m [in minutes]:\033[0m "))
+    delete_cron()
+    delete_cron2()
+
+    cron_entry = f"*/{minutes} * * * * /etc/reschisel.sh"
+
+    try:
+        existing_crontab = subprocess.check_output("crontab -l", shell=True).decode()
+    except subprocess.CalledProcessError:
+        print("\033[91mNo existing cron found!\033[0m")
+
+    new_crontab = f"{existing_crontab.rstrip()}\n{cron_entry}"
+    try:
+        subprocess.check_output(f'echo "{new_crontab}" | crontab -', shell=True)
+        display_checkmark("\033[92mCron entry added successfully!\033[0m")
+    except subprocess.CalledProcessError as e:
+        display_error(f"Failed to add cron entry. Error: {e}")
         
 def kharej5_t():
     os.system("clear")
@@ -278,6 +349,7 @@ def kharej5_t():
             break
         elif server_type == '3':
             kharej_ipv4()
+            break
         elif server_type == '4':
             kharej_ipv4()
             break
@@ -1804,7 +1876,30 @@ WantedBy=multi-user.target
 
 def delete_cron():
     entries_to_delete = [
-        "0 */2 * * * /etc/reschisel.sh"
+        "0 * * * * /etc/reschisel.sh",  
+        "0 */2 * * * /etc/reschisel.sh",  
+        "0 */3 * * * /etc/reschisel.sh",  
+        "0 */4 * * * /etc/reschisel.sh",  
+        "0 */5 * * * /etc/reschisel.sh", 
+        "0 */6 * * * /etc/reschisel.sh", 
+        "0 */7 * * * /etc/reschisel.sh", 
+        "0 */8 * * * /etc/reschisel.sh", 
+        "0 */9 * * * /etc/reschisel.sh", 
+        "0 */10 * * * /etc/reschisel.sh", 
+        "0 */11 * * * /etc/reschisel.sh", 
+        "0 */12 * * * /etc/reschisel.sh", 
+        "0 */13 * * * /etc/reschisel.sh", 
+        "0 */14 * * * /etc/reschisel.sh", 
+        "0 */15 * * * /etc/reschisel.sh", 
+        "0 */16 * * * /etc/reschisel.sh", 
+        "0 */17 * * * /etc/reschisel.sh", 
+        "0 */18 * * * /etc/reschisel.sh", 
+        "0 */19 * * * /etc/reschisel.sh", 
+        "0 */20 * * * /etc/reschisel.sh", 
+        "0 */21 * * * /etc/reschisel.sh", 
+        "0 */22 * * * /etc/reschisel.sh", 
+        "0 */23 * * * /etc/reschisel.sh", 
+        "0 */24 * * * /etc/reschisel.sh", 
     ]
 
     existing_crontab = ""
@@ -1823,7 +1918,86 @@ def delete_cron():
         subprocess.call(f"echo '{new_crontab}' | crontab -", shell=True)
         display_notification("\033[92mDeleting Previous Crons..\033[0m")
     else:
-        print("\033[91mCron doesn't exists, moving on..!\033[0m")        
+        print("\033[91mCron doesn't exist, moving on..!\033[0m")
+
+def delete_cron2():
+    entries_to_delete = [
+        "*/1 * * * * /etc/reschisel.sh",  
+        "*/2 * * * * /etc/reschisel.sh",  
+        "*/3 * * * * /etc/reschisel.sh",  
+        "*/4 * * * * /etc/reschisel.sh",  
+        "*/5 * * * * /etc/reschisel.sh",  
+        "*/10 * * * * /etc/reschisel.sh",  
+        "*/11 * * * * /etc/reschisel.sh",  
+        "*/12 * * * * /etc/reschisel.sh", 
+        "*/13 * * * * /etc/reschisel.sh",
+        "*/14 * * * * /etc/reschisel.sh",
+        "*/15 * * * * /etc/reschisel.sh",
+        "*/16 * * * * /etc/reschisel.sh",
+        "*/17 * * * * /etc/reschisel.sh",
+        "*/18 * * * * /etc/reschisel.sh",
+        "*/19 * * * * /etc/reschisel.sh",
+        "*/20 * * * * /etc/reschisel.sh",
+        "*/21 * * * * /etc/reschisel.sh",
+        "*/22 * * * * /etc/reschisel.sh",
+        "*/23 * * * * /etc/reschisel.sh",
+        "*/24 * * * * /etc/reschisel.sh",
+        "*/25 * * * * /etc/reschisel.sh",
+        "*/26 * * * * /etc/reschisel.sh",
+        "*/27 * * * * /etc/reschisel.sh",
+        "*/28 * * * * /etc/reschisel.sh",
+        "*/29 * * * * /etc/reschisel.sh",
+        "*/30 * * * * /etc/reschisel.sh",
+        "*/31 * * * * /etc/reschisel.sh",
+        "*/32 * * * * /etc/reschisel.sh",
+        "*/33 * * * * /etc/reschisel.sh",
+        "*/34 * * * * /etc/reschisel.sh",
+        "*/35 * * * * /etc/reschisel.sh",
+        "*/36 * * * * /etc/reschisel.sh",
+        "*/37 * * * * /etc/reschisel.sh",
+        "*/38 * * * * /etc/reschisel.sh",
+        "*/39 * * * * /etc/reschisel.sh",
+        "*/40 * * * * /etc/reschisel.sh",
+        "*/41 * * * * /etc/reschisel.sh",
+        "*/42 * * * * /etc/reschisel.sh",
+        "*/43 * * * * /etc/reschisel.sh",
+        "*/44 * * * * /etc/reschisel.sh",
+        "*/45 * * * * /etc/reschisel.sh",
+        "*/46 * * * * /etc/reschisel.sh",
+        "*/47 * * * * /etc/reschisel.sh",
+        "*/48 * * * * /etc/reschisel.sh",
+        "*/49 * * * * /etc/reschisel.sh",
+        "*/50 * * * * /etc/reschisel.sh",
+        "*/51 * * * * /etc/reschisel.sh",
+        "*/52 * * * * /etc/reschisel.sh",
+        "*/53 * * * * /etc/reschisel.sh",
+        "*/54 * * * * /etc/reschisel.sh",
+        "*/55 * * * * /etc/reschisel.sh",
+        "*/56 * * * * /etc/reschisel.sh",
+        "*/57 * * * * /etc/reschisel.sh",
+        "*/58 * * * * /etc/reschisel.sh",
+        "*/59 * * * * /etc/reschisel.sh",
+        
+        
+    ]
+
+    existing_crontab = ""
+    try:
+        existing_crontab = subprocess.check_output("crontab -l", shell=True).decode()
+    except subprocess.CalledProcessError:
+        display_error("\033[91mNo existing cron found!\033[0m")
+        return
+
+    new_crontab = existing_crontab
+    for entry in entries_to_delete:
+        if entry in existing_crontab:
+            new_crontab = new_crontab.replace(entry, "")
+
+    if new_crontab != existing_crontab:
+        subprocess.call(f"echo '{new_crontab}' | crontab -", shell=True)
+        display_notification("\033[92mDeleting Previous Crons..\033[0m")
+    else:
+        print("\033[91mCron doesn't exist, moving on..!\033[0m")  
         
 def kharej_ipv6_udp():
     if not os.path.isfile("/root/chisel"):

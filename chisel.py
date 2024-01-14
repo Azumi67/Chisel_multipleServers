@@ -1619,7 +1619,7 @@ def res_chisel3():
     try:
         existing_crontab = subprocess.check_output("crontab -l", shell=True).decode()
     except subprocess.CalledProcessError:
-        display_error("\033[91mNo existing cron found!\033[0m")
+        print("\033[91mNo existing cron found!\033[0m")
 
     new_crontab = f"{existing_crontab.rstrip()}\n{cron_entry}"
     try:
@@ -1725,7 +1725,7 @@ def res_chisel2():
     try:
         existing_crontab = subprocess.check_output("crontab -l", shell=True).decode()
     except subprocess.CalledProcessError:
-        display_error("\033[91mNo existing cron found!\033[0m")
+        print("\033[91mNo existing cron found!\033[0m")
 
     new_crontab = f"{existing_crontab.rstrip()}\n{cron_entry}"
     try:
@@ -1828,7 +1828,7 @@ def res_chisel1():
     try:
         existing_crontab = subprocess.check_output("crontab -l", shell=True).decode()
     except subprocess.CalledProcessError:
-        display_error("\033[91mNo existing cron found!\033[0m")
+        print("\033[91mNo existing cron found!\033[0m")
 
     new_crontab = f"{existing_crontab.rstrip()}\n{cron_entry}"
     try:
@@ -1906,7 +1906,7 @@ def delete_cron():
     try:
         existing_crontab = subprocess.check_output("crontab -l", shell=True).decode()
     except subprocess.CalledProcessError:
-        display_error("\033[91mNo existing cron found!\033[0m")
+        print("\033[91mNo existing cron found!\033[0m")
         return
 
     new_crontab = existing_crontab
@@ -1985,7 +1985,7 @@ def delete_cron2():
     try:
         existing_crontab = subprocess.check_output("crontab -l", shell=True).decode()
     except subprocess.CalledProcessError:
-        display_error("\033[91mNo existing cron found!\033[0m")
+        print("\033[91mNo existing cron found!\033[0m")
         return
 
     new_crontab = existing_crontab

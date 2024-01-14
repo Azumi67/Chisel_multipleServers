@@ -1898,8 +1898,7 @@ def delete_cron():
         "0 */20 * * * /etc/reschisel.sh", 
         "0 */21 * * * /etc/reschisel.sh", 
         "0 */22 * * * /etc/reschisel.sh", 
-        "0 */23 * * * /etc/reschisel.sh", 
-        "0 */24 * * * /etc/reschisel.sh", 
+        "0 */23 * * * /etc/reschisel.sh",  
     ]
 
     existing_crontab = ""

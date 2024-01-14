@@ -239,7 +239,7 @@ def main_menu():
                 timez()
             elif choice == 'q':
                 print("Exiting...")
-                break
+                sys.exit()
             else:
                 print("Invalid choice.")
 

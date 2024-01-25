@@ -182,13 +182,13 @@ def main_menu():
             print("\033[97m8. \033[93mChisel \033[92mUDP \033[93m[IPV6] \033[92m[7] \033[93mKHAREJ\033[92m [1] \033[93mIRAN")
             print(border)
             
-            display_notification("\033[92m[5] \033[96mIRAN \033[92m[1] \033[93mKharej\033[0m")
+            display_notification("\033[92m[3] \033[96mIRAN \033[92m[1] \033[93mKharej\033[0m")
             print("\033[93m─────────────────────────────────────────── \033[0m")
-            print("\033[97m9. \033[96mChisel \033[92mTCP \033[96m[IPV4] \033[92m[5] \033[96mIRAN\033[92m [1] \033[96mKHAREJ\033[0m")
-            print("\033[97m10.\033[96mChisel \033[92mUDP \033[96m[IPV4] \033[92m[5] \033[96mIRAN\033[92m [1] \033[96mKHAREJ\033[0m")  
+            print("\033[97m9. \033[96mChisel \033[92mTCP \033[96m[IPV4] \033[92m[3] \033[96mIRAN\033[92m [1] \033[96mKHAREJ\033[0m")
+            print("\033[97m10.\033[96mChisel \033[92mUDP \033[96m[IPV4] \033[92m[3] \033[96mIRAN\033[92m [1] \033[96mKHAREJ\033[0m")  
             
-            print("\033[97m11.\033[93mChisel \033[92mTCP \033[93m[IPV6] \033[92m[5] \033[93mIRAN\033[92m [1] \033[93mKHAREJ\033[0m")
-            print("\033[97m12.\033[93mChisel \033[92mUDP \033[93m[IPV6] \033[92m[5] \033[93mIRAN\033[92m [1] \033[93mKHAREJ\033[0m")
+            print("\033[97m11.\033[93mChisel \033[92mTCP \033[93m[IPV6] \033[92m[3] \033[93mIRAN\033[92m [1] \033[93mKHAREJ\033[0m")
+            print("\033[97m12.\033[93mChisel \033[92mUDP \033[93m[IPV6] \033[92m[3] \033[93mIRAN\033[92m [1] \033[93mKHAREJ\033[0m")
             print(border)
             print("\033[93m─────────────────────────────────────────── \033[0m")
             display_notification("\033[92mPrivate IP \033[0m")
@@ -540,10 +540,8 @@ def iran5_t():
     print('1. \033[93mIRAN\033[92m[1] \033[0m')
     print('2. \033[93mIRAN\033[92m[2] \033[0m')
     print('3. \033[93mIRAN\033[92m[3] \033[0m')
-    print('4. \033[93mIRAN\033[92m[4] \033[0m')
-    print('5. \033[93mIRAN\033[92m[5] \033[0m')
     print("\033[93m───────────────────────────────────────\033[0m")
-    print('6. \033[96mKharej \033[0m')
+    print('4. \033[96mKharej \033[0m')
     print('0. \033[92mBack to main menu \033[0m')
 
     print("\033[93m───────────────────────────────────────\033[0m")
@@ -551,20 +549,15 @@ def iran5_t():
     while True:
         server_type = input('\033[38;5;205mEnter your choice Please: \033[0m')
         if server_type == '1':
-            iran_ipv4()
+            iran_ipv14()
             break
         elif server_type == '2':
-            iran_ipv4()
+            iran_ipv24()
             break
         elif server_type == '3':
-            iran_ipv4()
+            iran_ipv34()
+            break
         elif server_type == '4':
-            iran_ipv4()
-            break
-        elif server_type == '5':
-            iran_ipv4()
-            break
-        elif server_type == '6':
             config_kharej()
             break
         elif server_type == '0':
@@ -584,10 +577,8 @@ def iran5_t6():
     print('1. \033[93mIRAN\033[92m[1] \033[0m')
     print('2. \033[93mIRAN\033[92m[2] \033[0m')
     print('3. \033[93mIRAN\033[92m[3] \033[0m')
-    print('4. \033[93mIRAN\033[92m[4] \033[0m')
-    print('5. \033[93mIRAN\033[92m[5] \033[0m')
     print("\033[93m───────────────────────────────────────\033[0m")
-    print('6. \033[96mKharej \033[0m')
+    print('4. \033[96mKharej \033[0m')
     print('0. \033[92mBack to main menu \033[0m')
 
     print("\033[93m───────────────────────────────────────\033[0m")
@@ -595,20 +586,15 @@ def iran5_t6():
     while True:
         server_type = input('\033[38;5;205mEnter your choice Please: \033[0m')
         if server_type == '1':
-            iran_ipv6()
+            iran_ipv16()
             break
         elif server_type == '2':
-            iran_ipv6()
+            iran_ipv26()
             break
         elif server_type == '3':
-            iran_ipv6()
+            iran_ipv36()
+            break
         elif server_type == '4':
-            iran_ipv6()
-            break
-        elif server_type == '5':
-            iran_ipv6()
-            break
-        elif server_type == '6':
             config_kharej6()
             break
         elif server_type == '0':
@@ -628,10 +614,8 @@ def iran5_u():
     print('1. \033[93mIRAN\033[92m[1] \033[0m')
     print('2. \033[93mIRAN\033[92m[2] \033[0m')
     print('3. \033[93mIRAN\033[92m[3] \033[0m')
-    print('4. \033[93mIRAN\033[92m[4] \033[0m')
-    print('5. \033[93mIRAN\033[92m[5] \033[0m')
     print("\033[93m───────────────────────────────────────\033[0m")
-    print('6. \033[96mKharej \033[0m')
+    print('4. \033[96mKharej \033[0m')
     print('0. \033[92mBack to previous menu \033[0m')
 
     print("\033[93m───────────────────────────────────────\033[0m")
@@ -639,20 +623,15 @@ def iran5_u():
     while True:
         server_type = input('\033[38;5;205mEnter your choice Please: \033[0m')
         if server_type == '1':
-            iran_ipv4_udp()
+            iran_ipv14_udp()
             break
         elif server_type == '2':
-            iran_ipv4_udp()
+            iran_ipv24_udp()
             break
         elif server_type == '3':
-            iran_ipv4_udp()
+            iran_ipv34_udp()
+            break
         elif server_type == '4':
-            iran_ipv4_udp()
-            break
-        elif server_type == '5':
-            iran_ipv4_udp()
-            break
-        elif server_type == '6':
             config_kha_udp()
             break
         elif server_type == '0':
@@ -672,10 +651,8 @@ def iran5_u6():
     print('1. \033[93mIRAN\033[92m[1] \033[0m')
     print('2. \033[93mIRAN\033[92m[2] \033[0m')
     print('3. \033[93mIRAN\033[92m[3] \033[0m')
-    print('4. \033[93mIRAN\033[92m[4] \033[0m')
-    print('5. \033[93mIRAN\033[92m[5] \033[0m')
     print("\033[93m───────────────────────────────────────\033[0m")
-    print('6. \033[96mKharej \033[0m')
+    print('4. \033[96mKharej \033[0m')
     print('0. \033[92mBack to previous menu \033[0m')
 
     print("\033[93m───────────────────────────────────────\033[0m")
@@ -683,20 +660,15 @@ def iran5_u6():
     while True:
         server_type = input('\033[38;5;205mEnter your choice Please: \033[0m')
         if server_type == '1':
-            iran_ipv6_udp()
+            iran_ipv16_udp()
             break
         elif server_type == '2':
-            iran_ipv6_udp()
+            iran_ipv26_udp()
             break
         elif server_type == '3':
-            iran_ipv6_udp()
+            iran_ipv36_udp()
+            break
         elif server_type == '4':
-            iran_ipv6_udp()
-            break
-        elif server_type == '5':
-            iran_ipv6_udp()
-            break
-        elif server_type == '6':
             config_ud6()
             break
         elif server_type == '0':
@@ -997,7 +969,7 @@ def iran_ipv4():
        display_error("An error occurred while removing: {}".format(str(e)))
 
     host = input("\033[93mEnter \033[92mIRAN\033[96m IPV4\033[93m address: \033[0m")
-    port = input("\033[93mEnter  \033[92mTunnel Port \033[93m (default 443): \033[0m") or '443'
+    port = input("\033[93mEnter  \033[92mTunnel Port \033[93m : \033[0m") or '443'
 
     try:
         os.makedirs(key_directory, exist_ok=True) 
@@ -1009,8 +981,109 @@ def iran_ipv4():
         iran_tcp(host, key_path, int(port))
     except Exception as e:
          display_error("An error occurred: {}".format(str(e)))
-    
 
+def iran_ipv24():
+    if not os.path.isfile("/root/chisel"):
+        chisel_mnu()
+    forward()
+    
+    print("\033[93m───────────────────────────\033[0m")
+    display_notification("\033[93mConfiguring IRAN 2 \033[0m")
+    print("\033[93m───────────────────────────\033[0m")
+    res_chisel2()
+
+    key_directory = "/etc/chisel"
+    try:
+        if os.path.exists(key_directory):
+            try:
+                shutil.rmtree(key_directory)  
+            except NotADirectoryError:
+                os.remove(key_directory)  
+    except Exception as e:
+       display_error("An error occurred while removing: {}".format(str(e)))
+
+    host = input("\033[93mEnter \033[92mIRAN [2]\033[96m IPV4\033[93m address: \033[0m")
+    port = input("\033[93mEnter  \033[92mTunnel Port \033[93m : \033[0m") or '443'
+
+    try:
+        os.makedirs(key_directory, exist_ok=True) 
+        print("\033[93m────────────────────────\033[0m")        
+
+        key_path = f"{key_directory}/chisel_key_1.key"
+
+        chisel_key(key_path)
+        iran_tcp(host, key_path, int(port))
+    except Exception as e:
+         display_error("An error occurred: {}".format(str(e)))
+
+def iran_ipv34():
+    if not os.path.isfile("/root/chisel"):
+        chisel_mnu()
+    forward()
+    
+    print("\033[93m───────────────────────────\033[0m")
+    display_notification("\033[93mConfiguring IRAN 3 \033[0m")
+    print("\033[93m───────────────────────────\033[0m")
+    res_chisel2()
+
+    key_directory = "/etc/chisel"
+    try:
+        if os.path.exists(key_directory):
+            try:
+                shutil.rmtree(key_directory)  
+            except NotADirectoryError:
+                os.remove(key_directory)  
+    except Exception as e:
+       display_error("An error occurred while removing: {}".format(str(e)))
+
+    host = input("\033[93mEnter \033[92mIRAN [3]\033[96m IPV4\033[93m address: \033[0m")
+    port = input("\033[93mEnter  \033[92mTunnel Port \033[93m : \033[0m") or '443'
+
+    try:
+        os.makedirs(key_directory, exist_ok=True) 
+        print("\033[93m────────────────────────\033[0m")        
+
+        key_path = f"{key_directory}/chisel_key_1.key"
+
+        chisel_key(key_path)
+        iran_tcp(host, key_path, int(port))
+    except Exception as e:
+         display_error("An error occurred: {}".format(str(e)))
+         
+def iran_ipv14():
+    if not os.path.isfile("/root/chisel"):
+        chisel_mnu()
+    forward()
+    
+    print("\033[93m───────────────────────────\033[0m")
+    display_notification("\033[93mConfiguring IRAN 1 \033[0m")
+    print("\033[93m───────────────────────────\033[0m")
+    res_chisel2()
+
+    key_directory = "/etc/chisel"
+    try:
+        if os.path.exists(key_directory):
+            try:
+                shutil.rmtree(key_directory)  
+            except NotADirectoryError:
+                os.remove(key_directory)  
+    except Exception as e:
+       display_error("An error occurred while removing: {}".format(str(e)))
+
+    host = input("\033[93mEnter \033[92mIRAN [1]\033[96m IPV4\033[93m address: \033[0m")
+    port = input("\033[93mEnter  \033[92mTunnel Port \033[93m : \033[0m") or '443'
+
+    try:
+        os.makedirs(key_directory, exist_ok=True) 
+        print("\033[93m────────────────────────\033[0m")        
+
+        key_path = f"{key_directory}/chisel_key_1.key"
+
+        chisel_key(key_path)
+        iran_tcp(host, key_path, int(port))
+    except Exception as e:
+         display_error("An error occurred: {}".format(str(e)))
+         
 def kharej_tc(server_number, config_number, iran_ipv4, kharej_port, df_port=443):
     service_name = f"kharej_{server_number}_{config_number}"
     service_file = f"/etc/systemd/system/{service_name}.service"
@@ -1047,28 +1120,29 @@ WantedBy=multi-user.target
         display_error(f"\033[91mFailed in creating Kharej service {config_number} (Server {server_number}). Error: {e.output}\033[0m")
 
 def config_kharej():
-    def kharej_ipv4(num_servers):
-        if not os.path.isfile("/root/chisel"):
-            chisel_mnu()
-        forward()
-        
-        print("\033[93m───────────────────────────\033[0m")
-        display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
-        print("\033[93m───────────────────────────\033[0m")
-        
-        server_configs = []
+    if not os.path.isfile("/root/chisel"):
+        chisel_mnu()
+    forward()
 
-        for i in range(1, num_servers + 1):
-            print("\033[93m────────────────────────\033[0m") 
+    print("\033[93m───────────────────────────\033[0m")
+    display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
+    print("\033[93m───────────────────────────\033[0m")
+
+    server_configs = []
+
+    num_iran_servers = int(input("\033[93mEnter the number of \033[92mIRAN\033[93m servers:\033[0m "))
+    if num_iran_servers > 0:
+        for i in range(1, num_iran_servers + 1):
+            print("\033[93m────────────────────────\033[0m")
             print("\033[92m    --- Config {} ---\033[0m".format(i))
             print("\033[93m────────────────────────\033[0m")
             iran_ipv4 = input("\033[93mEnter \033[92mIRAN Server {} \033[96mIPV4\033[93m address: \033[0m".format(i))
             num_configs = int(input("\033[93mEnter the \033[93mnumber \033[93mof \033[96mKharej configs: \033[0m".format(i)))
-            
+
             configs = []
             for j in range(1, num_configs + 1):
                 kharej_port = input("\033[93mEnter \033[96mKharej \033[92mConfig {} port\033[93m: \033[0m".format(j))
-                df_port = input("\033[93mEnter \033[96mTunnel Port\033[93m (default 443): \033[0m") or '443'
+                df_port = input("\033[93mEnter \033[96mTunnel Port\033[93m for Server {}: \033[0m".format(i))
                 configs.append((kharej_port, df_port))
 
             server_configs.append((iran_ipv4, configs))
@@ -1081,13 +1155,10 @@ def config_kharej():
                 print(f"\033[93m| Server {i} - Config {j}: Your Address & Port: {iran_ipv4} : {kharej_port}  \033[0m")
             print("\033[93m╰──────────────────────────────────────────────────────────────────────╯\033[0m")
 
-        return server_configs
-
-    num_iran_servers = int(input("\033[93mEnter the number of \033[92mIRAN\033[93m servers:\033[0m "))
-    if num_iran_servers > 0:
-        kharej_ipv4(num_iran_servers)
     else:
         print("\033[91mNo Iran servers, so I'm giving up..\033[0m")
+
+    return server_configs
         
 def kharej_tcp(config_number, iran_ipv4, kharej_port, tunnel_port=443):
     service_name = f"kharej_{config_number}"
@@ -1194,6 +1265,78 @@ WantedBy=multi-user.target
     except subprocess.CalledProcessError as e:
         display_error("\033[91mFailed in creating IRAN service. Error: {}\033[0m".format(e.output))
 
+def iran_ipv16():
+    if not os.path.isfile("/root/chisel"):
+        chisel_mnu()
+    forward()
+    
+    print("\033[93m───────────────────────────\033[0m")
+    display_notification("\033[93mConfiguring IRAN [1] \033[0m")
+    print("\033[93m───────────────────────────\033[0m")
+    res_chisel2()
+    key_directory = "/etc/chisel"
+    try:
+        os.makedirs(key_directory, exist_ok=True)
+    except Exception as e:
+        display_error("An error occurred while creating the key dir: {}".format(str(e)))
+
+    host = input("\033[93mEnter \033[92mIRAN [1]\033[96m IPV6\033[93m address: \033[0m")
+    tunnel_port = input("\033[93mEnter \033[92mTunnel port\033[93m : \033[0m") or "443"
+
+    print("\033[93m────────────────────────\033[0m")
+
+    key_path = f"{key_directory}/chisel_key_1.key"
+    chisel_key(key_path)
+    iran_tcp2(host, key_path, tunnel_port)
+
+def iran_ipv26():
+    if not os.path.isfile("/root/chisel"):
+        chisel_mnu()
+    forward()
+    
+    print("\033[93m───────────────────────────\033[0m")
+    display_notification("\033[93mConfiguring IRAN [2] \033[0m")
+    print("\033[93m───────────────────────────\033[0m")
+    res_chisel2()
+    key_directory = "/etc/chisel"
+    try:
+        os.makedirs(key_directory, exist_ok=True)
+    except Exception as e:
+        display_error("An error occurred while creating the key dir: {}".format(str(e)))
+
+    host = input("\033[93mEnter \033[92mIRAN [2]\033[96m IPV6\033[93m address: \033[0m")
+    tunnel_port = input("\033[93mEnter \033[92mTunnel port\033[93m : \033[0m") or "443"
+
+    print("\033[93m────────────────────────\033[0m")
+
+    key_path = f"{key_directory}/chisel_key_1.key"
+    chisel_key(key_path)
+    iran_tcp2(host, key_path, tunnel_port)
+    
+def iran_ipv36():
+    if not os.path.isfile("/root/chisel"):
+        chisel_mnu()
+    forward()
+    
+    print("\033[93m───────────────────────────\033[0m")
+    display_notification("\033[93mConfiguring IRAN [3]\033[0m")
+    print("\033[93m───────────────────────────\033[0m")
+    res_chisel2()
+    key_directory = "/etc/chisel"
+    try:
+        os.makedirs(key_directory, exist_ok=True)
+    except Exception as e:
+        display_error("An error occurred while creating the key dir: {}".format(str(e)))
+
+    host = input("\033[93mEnter \033[92mIRAN [3]\033[96m IPV6\033[93m address: \033[0m")
+    tunnel_port = input("\033[93mEnter \033[92mTunnel port\033[93m : \033[0m") or "443"
+
+    print("\033[93m────────────────────────\033[0m")
+
+    key_path = f"{key_directory}/chisel_key_1.key"
+    chisel_key(key_path)
+    iran_tcp2(host, key_path, tunnel_port)
+    
 def iran_ipv6():
     if not os.path.isfile("/root/chisel"):
         chisel_mnu()
@@ -1254,46 +1397,41 @@ WantedBy=multi-user.target
         display_error("\033[91mFailed in creating Kharej service {}/{}. Error: {}\033[0m".format(server_number, config_number, e.output))
 
 def config_kharej6():
-    def kharej_ipv6():
-        if not os.path.isfile("/root/chisel"):
-            chisel_mnu()
-        
-        forward()
-        
-        print("\033[93m───────────────────────────\033[0m")
-        display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
-        print("\033[93m───────────────────────────\033[0m")
-        
-        num_servers = int(input("\033[93mEnter the number of \033[92mIRAN\033[93m servers:\033[0m "))
-        server_configs = []
+    if not os.path.isfile("/root/chisel"):
+        chisel_mnu()
 
-        for i in range(1, num_servers + 1):
-            print("\033[93m────────────────────────\033[0m") 
-            print("\033[92m    --- Server {} ---\033[0m".format(i))
-            print("\033[93m────────────────────────\033[0m")
-            
-            num_configs = int(input("\033[93mEnter the \033[92mNumber \033[93mof \033[96mKharej Configs: \033[0m".format(i)))
-            iran_ipv4 = input("\033[93mEnter \033[92mIRAN Server {}\033[96m IPV4\033[93m address: \033[0m".format(i))
-            iran_ipv6 = input("\033[93mEnter \033[92mIRAN Server {}\033[96m IPV6\033[93m address: \033[0m".format(i))
-            
-            configs = []
-            for j in range(1, num_configs + 1):
-                kharej_port = input("\033[93mEnter Kharej \033[92mConfig port\033[93m for config {}: \033[0m".format(j))
-                configs.append(kharej_port)
+    forward()
 
-                tunnel_port = input("\033[93mEnter \033[92mTunnel Port\033[93m (default: 443): \033[0m") or "443"
-                kharej_tc2(j, i, iran_ipv6, kharej_port, tunnel_port)
-            res_chisel3()
-            print("\033[93m╭──────────────────────────────────────────────────────────────────────╮\033[0m")
-            for j, config_port in enumerate(configs, start=1):
-                print(f"\033[93m| Server {i} - Config {j}: Your Address & Port: {iran_ipv4} : {config_port}  \033[0m")
-            print("\033[93m╰──────────────────────────────────────────────────────────────────────╯\033[0m")
+    print("\033[93m───────────────────────────\033[0m")
+    display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
+    print("\033[93m───────────────────────────\033[0m")
 
-            server_configs.append((iran_ipv4, configs))
+    num_servers = int(input("\033[93mEnter the number of \033[92mIRAN\033[93m servers:\033[0m "))
+    server_configs = []
 
-        return server_configs
+    for i in range(1, num_servers + 1):
+        print("\033[93m────────────────────────\033[0m")
+        print("\033[92m    --- Server {} ---\033[0m".format(i))
+        print("\033[93m────────────────────────\033[0m")
 
-    server_configs = kharej_ipv6()
+        num_configs = int(input("\033[93mEnter the \033[92mNumber \033[93mof \033[96mKharej Configs: \033[0m".format(i)))
+        iran_ipv4 = input("\033[93mEnter \033[92mIRAN Server {}\033[96m IPV4\033[93m address: \033[0m".format(i))
+        iran_ipv6 = input("\033[93mEnter \033[92mIRAN Server {}\033[96m IPV6\033[93m address: \033[0m".format(i))
+
+        configs = []
+        for j in range(1, num_configs + 1):
+            kharej_port = input("\033[93mEnter Kharej \033[92mConfig port\033[93m for config {}: \033[0m".format(j))
+            configs.append(kharej_port)
+
+            tunnel_port = input("\033[93mEnter \033[96mTunnel Port\033[93m for Server {}: \033[0m".format(i))
+            kharej_tc2(j, i, iran_ipv6, kharej_port, tunnel_port)
+        res_chisel3()
+        print("\033[93m╭──────────────────────────────────────────────────────────────────────╮\033[0m")
+        for j, config_port in enumerate(configs, start=1):
+            print(f"\033[93m| Server {i} - Config {j}: Your Address & Port: {iran_ipv4} : {config_port}  \033[0m")
+        print("\033[93m╰──────────────────────────────────────────────────────────────────────╯\033[0m")
+
+        server_configs.append((iran_ipv4, configs))
 
     return server_configs
 
@@ -1405,7 +1543,117 @@ WantedBy=multi-user.target
     except subprocess.CalledProcessError as e:
         display_error("\033[91mFailed in creating IRAN service. Error: {}\033[0m".format(e.output))
 
+def iran_ipv14_udp():
+    if not os.path.isfile("/root/chisel"):
+        chisel_mnu()
 
+    forward()
+    
+    print("\033[93m───────────────────────────\033[0m")
+    display_notification("\033[93mConfiguring IRAN [1] \033[0m")
+    print("\033[93m───────────────────────────\033[0m")
+    res_chisel2()
+    key_directory = "/etc/chisel"
+    try:
+        if os.path.exists(key_directory):
+            try:
+                shutil.rmtree(key_directory)
+            except NotADirectoryError:
+                os.remove(key_directory)
+    except Exception as e:
+        display_error("An error occurred while removing: {}".format(str(e)))
+
+    try:
+        os.makedirs(key_directory, exist_ok=True)
+        print("\033[93m────────────────────────\033[0m")
+        host = input("\033[93mEnter \033[92mIRAN [1]\033[96m IPV4\033[93m address: \033[0m")
+        tunnel_port = input("\033[93mEnter \033[92mTunnel Port\033[93m : \033[0m") or '443'
+        print("\033[93m────────────────────────\033[0m")
+
+        key_path = f"{key_directory}/chisel_key_1.key"
+
+        try:
+            chisel_key(key_path)
+            iran_udp(host, key_path, int(tunnel_port))
+        except Exception as e:
+            display_error("Failed to generate key: Error: {}".format(str(e)))
+    except Exception as e:
+        display_error("An error occurred while making dir: {}".format(str(e)))
+
+def iran_ipv24_udp():
+    if not os.path.isfile("/root/chisel"):
+        chisel_mnu()
+
+    forward()
+    
+    print("\033[93m───────────────────────────\033[0m")
+    display_notification("\033[93mConfiguring IRAN [2]\033[0m")
+    print("\033[93m───────────────────────────\033[0m")
+    res_chisel2()
+    key_directory = "/etc/chisel"
+    try:
+        if os.path.exists(key_directory):
+            try:
+                shutil.rmtree(key_directory)
+            except NotADirectoryError:
+                os.remove(key_directory)
+    except Exception as e:
+        display_error("An error occurred while removing: {}".format(str(e)))
+
+    try:
+        os.makedirs(key_directory, exist_ok=True)
+        print("\033[93m────────────────────────\033[0m")
+        host = input("\033[93mEnter \033[92mIRAN [2]\033[96m IPV4\033[93m address: \033[0m")
+        tunnel_port = input("\033[93mEnter \033[92mTunnel Port\033[93m : \033[0m") or '443'
+        print("\033[93m────────────────────────\033[0m")
+
+        key_path = f"{key_directory}/chisel_key_1.key"
+
+        try:
+            chisel_key(key_path)
+            iran_udp(host, key_path, int(tunnel_port))
+        except Exception as e:
+            display_error("Failed to generate key: Error: {}".format(str(e)))
+    except Exception as e:
+        display_error("An error occurred while making dir: {}".format(str(e)))
+
+def iran_ipv34_udp():
+    if not os.path.isfile("/root/chisel"):
+        chisel_mnu()
+
+    forward()
+    
+    print("\033[93m───────────────────────────\033[0m")
+    display_notification("\033[93mConfiguring IRAN [3] \033[0m")
+    print("\033[93m───────────────────────────\033[0m")
+    res_chisel2()
+    key_directory = "/etc/chisel"
+    try:
+        if os.path.exists(key_directory):
+            try:
+                shutil.rmtree(key_directory)
+            except NotADirectoryError:
+                os.remove(key_directory)
+    except Exception as e:
+        display_error("An error occurred while removing: {}".format(str(e)))
+
+    try:
+        os.makedirs(key_directory, exist_ok=True)
+        print("\033[93m────────────────────────\033[0m")
+        host = input("\033[93mEnter \033[92mIRAN [3]\033[96m IPV4\033[93m address: \033[0m")
+        tunnel_port = input("\033[93mEnter \033[92mTunnel Port\033[93m : \033[0m") or '443'
+        print("\033[93m────────────────────────\033[0m")
+
+        key_path = f"{key_directory}/chisel_key_1.key"
+
+        try:
+            chisel_key(key_path)
+            iran_udp(host, key_path, int(tunnel_port))
+        except Exception as e:
+            display_error("Failed to generate key: Error: {}".format(str(e)))
+    except Exception as e:
+        display_error("An error occurred while making dir: {}".format(str(e)))
+        
 def iran_ipv4_udp():
     if not os.path.isfile("/root/chisel"):
         chisel_mnu()
@@ -1550,46 +1798,41 @@ WantedBy=multi-user.target
 
 
 def config_ud6():
-    def kharej_ipv6_udp():
-        if not os.path.isfile("/root/chisel"):
-            chisel_mnu()
+    if not os.path.isfile("/root/chisel"):
+        chisel_mnu()
 
-        forward()
-        print("\033[93m───────────────────────────\033[0m")
-        display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
-        print("\033[93m───────────────────────────\033[0m")
-        
-        num_servers = int(input("\033[93mEnter the number of \033[92mIRAN\033[93m servers:\033[0m "))
-        server_configs = []
+    forward()
+    print("\033[93m───────────────────────────\033[0m")
+    display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
+    print("\033[93m───────────────────────────\033[0m")
 
-        for i in range(1, num_servers + 1):
-            print("\033[93m────────────────────────\033[0m")
-            print("\033[92m    --- Server {} ---\033[0m".format(i))
-            print("\033[93m────────────────────────\033[0m")
+    num_servers = int(input("\033[93mEnter the number of \033[92mIRAN\033[93m servers:\033[0m "))
+    server_configs = []
 
-            num_configs = int(input("\033[93mEnter the \033[92mnumber\033[93m of \033[96mKharej configs: \033[0m".format(i)))
-            iran_ipv4 = input("\033[93mEnter \033[92mIRAN Server {}\033[96m IPV4\033[93m address: \033[0m".format(i))
-            iran_ipv6 = input("\033[93mEnter \033[92mIRAN Server {}\033[96m IPV6\033[93m address: \033[0m".format(i))
+    for i in range(1, num_servers + 1):
+        print("\033[93m────────────────────────\033[0m")
+        print("\033[92m    --- Server {} ---\033[0m".format(i))
+        print("\033[93m────────────────────────\033[0m")
 
-            configs = []
-            for j in range(1, num_configs + 1):
-                kharej_port = input("\033[93mEnter \033[96mKharej \033[92mConfig {} port\033[93m: \033[0m".format(j))
-                tunnel_port = input("\033[93mEnter \033[92mTunnel Port\033[93m (default: 443): \033[0m") or "443"
+        num_configs = int(input("\033[93mEnter the \033[92mnumber\033[93m of \033[96mKharej configs: \033[0m"))
+        iran_ipv4 = input("\033[93mEnter \033[92mIRAN Server {}\033[96m IPV4\033[93m address: \033[0m".format(i))
+        iran_ipv6 = input("\033[93mEnter \033[92mIRAN Server {}\033[96m IPV6\033[93m address: \033[0m".format(i))
 
-                configs.append(kharej_port)
+        configs = []
+        for j in range(1, num_configs + 1):
+            kharej_port = input("\033[93mEnter \033[96mKharej \033[92mConfig {} port\033[93m: \033[0m".format(j))
+            tunnel_port = input("\033[93mEnter \033[96mTunnel Port\033[93m for Server {}: \033[0m".format(i))
 
-                kharej_ud6(j, i, iran_ipv6, kharej_port, tunnel_port)
-            res_chisel3()
-            print("\033[93m╭──────────────────────────────────────────────────────────────────────╮\033[0m")
-            for j, config_port in enumerate(configs, start=1):
-                print(f"\033[93m| Server {i} - Config {j}: Your Address & Port: {iran_ipv4} : {config_port}  \033[0m")
-            print("\033[93m╰──────────────────────────────────────────────────────────────────────╯\033[0m")
+            configs.append(kharej_port)
 
-            server_configs.append((iran_ipv4, configs))
+            kharej_ud6(j, i, iran_ipv6, kharej_port, tunnel_port)
+        res_chisel3()
+        print("\033[93m╭──────────────────────────────────────────────────────────────────────╮\033[0m")
+        for j, config_port in enumerate(configs, start=1):
+            print(f"\033[93m| Server {i} - Config {j}: Your Address & Port: {iran_ipv4} : {config_port}  \033[0m")
+        print("\033[93m╰──────────────────────────────────────────────────────────────────────╯\033[0m")
 
-        return server_configs
-
-    server_configs = kharej_ipv6_udp()
+        server_configs.append((iran_ipv4, configs))
 
     return server_configs
     
@@ -1665,27 +1908,32 @@ WantedBy=multi-user.target
 
 
 def config_kha_udp():
-    def kharej_ip4(num_servers, tunnel_port):
-        if not os.path.isfile("/root/chisel"):
-            chisel_mnu()
-        forward()
-        print("\033[93m───────────────────────────\033[0m")
-        display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
-        print("\033[93m───────────────────────────\033[0m")
-        
-        server_configs = []
+    if not os.path.isfile("/root/chisel"):
+        chisel_mnu()
+    forward()
+    print("\033[93m───────────────────────────\033[0m")
+    display_notification("\033[93mConfiguring \033[96mKHAREJ\033[0m")
+    print("\033[93m───────────────────────────\033[0m")
 
-        for i in range(1, num_servers + 1):
-            print("\033[93m────────────────────────\033[0m") 
+    server_configs = []
+
+    num_iran_servers = int(input("\033[93mEnter the number of \033[92mIRAN\033[93m servers:\033[0m "))
+    
+    if num_iran_servers > 0:
+        for i in range(1, num_iran_servers + 1):
+            print("\033[93m────────────────────────\033[0m")
             print("\033[92m    --- Server {} ---\033[0m".format(i))
             print("\033[93m────────────────────────\033[0m")
+            
             iran_ipv4 = input("\033[93mEnter \033[92mIRAN Server {} \033[96mIPV4\033[93m address: \033[0m".format(i))
             num_configs = int(input("\033[93mEnter the \033[93mnumber \033[93mof \033[96mKharej configs:\033[0m ".format(i)))
-            
+
             configs = []
             for j in range(1, num_configs + 1):
                 kharej_port = input("\033[93mEnter \033[96mKharej \033[92mConfig {} port\033[93m: \033[0m".format(j))
                 configs.append(kharej_port)
+
+            tunnel_port = input("\033[93mEnter \033[96mTunnel Port\033[93m for Server {}: \033[0m".format(i))
 
             server_configs.append((iran_ipv4, configs))
 
@@ -1696,15 +1944,10 @@ def config_kha_udp():
             for j, config_port in enumerate(configs, start=1):
                 print(f"\033[93m| Server {i} - Config {j}: Your Address & Port: {iran_ipv4} : {config_port}  \033[0m")
             print("\033[93m╰───────────────────────────────────────────────────────────────────────────────────╯\033[0m")
-
-        return server_configs
-
-    num_iran_servers = int(input("\033[93mEnter the number of \033[92mIRAN\033[93m servers:\033[0m "))
-    tunnel_port = int(input("\033[93mEnter \033[92mTunnel Port\033[93m (default: 443):\033[0m ") or 443)
-    if num_iran_servers > 0:
-        kharej_ip4(num_iran_servers, tunnel_port)
     else:
         print("\033[91mNo Iran servers, so I'm giving up..\033[0m")
+
+    return server_configs
 
 def res_chisel2():
     delete_cron()
@@ -1772,6 +2015,108 @@ WantedBy=multi-user.target
     except subprocess.CalledProcessError as e:
         display_error("\033[91mFailed in creating IRAN service. Error: {}\033[0m".format(e.output))
 
+def iran_ipv16_udp():
+    if not os.path.isfile("/root/chisel"):
+        chisel_mnu()
+        
+    forward()
+    print("\033[93m───────────────────────────\033[0m")
+    display_notification("\033[93mConfiguring IRAN 1 \033[0m")
+    print("\033[93m───────────────────────────\033[0m")
+    res_chisel2()
+
+    key_directory = "/etc/chisel"
+    try:
+        if os.path.exists(key_directory):
+            try:
+                shutil.rmtree(key_directory)
+            except NotADirectoryError:
+                os.remove(key_directory)
+    except Exception as e:
+        display_error("An error occurred while removing: {}".format(str(e)))
+
+    try:
+        os.makedirs(key_directory, exist_ok=True)  
+        host = input("\033[93mEnter \033[92mIRAN [1]\033[96m IPV6\033[93m address: \033[0m")
+        tunnel_port = input("\033[93mEnter \033[92mTunnel Port\033[93m :\033[0m ") or 443
+
+        print("\033[93m────────────────────────\033[0m") 
+        
+        key_path = f"{key_directory}/chisel_key_1.key"
+        chisel_key(key_path)
+        iran_udp2(host, key_path, tunnel_port)
+
+    except Exception as e:
+        display_error("An error occurred: {}".format(str(e)))
+
+def iran_ipv26_udp():
+    if not os.path.isfile("/root/chisel"):
+        chisel_mnu()
+        
+    forward()
+    print("\033[93m───────────────────────────\033[0m")
+    display_notification("\033[93mConfiguring IRAN 2 \033[0m")
+    print("\033[93m───────────────────────────\033[0m")
+    res_chisel2()
+
+    key_directory = "/etc/chisel"
+    try:
+        if os.path.exists(key_directory):
+            try:
+                shutil.rmtree(key_directory)
+            except NotADirectoryError:
+                os.remove(key_directory)
+    except Exception as e:
+        display_error("An error occurred while removing: {}".format(str(e)))
+
+    try:
+        os.makedirs(key_directory, exist_ok=True)  
+        host = input("\033[93mEnter \033[92mIRAN [2]\033[96m IPV6\033[93m address: \033[0m")
+        tunnel_port = input("\033[93mEnter \033[92mTunnel Port\033[93m :\033[0m ") or 443
+
+        print("\033[93m────────────────────────\033[0m") 
+        
+        key_path = f"{key_directory}/chisel_key_1.key"
+        chisel_key(key_path)
+        iran_udp2(host, key_path, tunnel_port)
+
+    except Exception as e:
+        display_error("An error occurred: {}".format(str(e)))
+
+def iran_ipv36_udp():
+    if not os.path.isfile("/root/chisel"):
+        chisel_mnu()
+        
+    forward()
+    print("\033[93m───────────────────────────\033[0m")
+    display_notification("\033[93mConfiguring IRAN 3 \033[0m")
+    print("\033[93m───────────────────────────\033[0m")
+    res_chisel2()
+
+    key_directory = "/etc/chisel"
+    try:
+        if os.path.exists(key_directory):
+            try:
+                shutil.rmtree(key_directory)
+            except NotADirectoryError:
+                os.remove(key_directory)
+    except Exception as e:
+        display_error("An error occurred while removing: {}".format(str(e)))
+
+    try:
+        os.makedirs(key_directory, exist_ok=True)  
+        host = input("\033[93mEnter \033[92mIRAN [3]\033[96m IPV6\033[93m address: \033[0m")
+        tunnel_port = input("\033[93mEnter \033[92mTunnel Port\033[93m :\033[0m ") or 443
+
+        print("\033[93m────────────────────────\033[0m") 
+        
+        key_path = f"{key_directory}/chisel_key_1.key"
+        chisel_key(key_path)
+        iran_udp2(host, key_path, tunnel_port)
+
+    except Exception as e:
+        display_error("An error occurred: {}".format(str(e)))
+        
 def iran_ipv6_udp():
     if not os.path.isfile("/root/chisel"):
         chisel_mnu()

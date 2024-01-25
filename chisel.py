@@ -2919,7 +2919,7 @@ def chisel_status():
     print('\033[93mChoose what to do:\033[0m')
     print('1. \033[92mChisel Single Server \033[0m')
     print('2. \033[93m[1] IRAN [5] Kharej \033[0m')
-    print('3. \033[96m[5] IRAN [1] Kharej \033[0m')
+    print('3. \033[96m[3] IRAN [1] Kharej \033[0m')
     print('4. \033[94mBack to the main menu\033[0m')
     print("\033[93m╰───────────────────────────────────────╯\033[0m")
 
@@ -2951,36 +2951,29 @@ def chisel2_status():
 
     services = {
         'iran': 'iran',
-        'kharej': 'kharej_1',
-        'kharej': 'kharej_2',
-        'kharej': 'kharej_3',
-        'kharej': 'kharej_4',
-        'kharej': 'kharej_5'
+        'kharej': ['kharej_1', 'kharej_2', 'kharej_3', 'kharej_4', 'kharej_5']
     }
 
     print("\033[93m            ╔════════════════════════════════════════════╗\033[0m")
     print("\033[93m            ║                 \033[92mChisel Status\033[93m              ║\033[0m")
     print("\033[93m            ╠════════════════════════════════════════════╣\033[0m")
 
-    for service, service_name in services.items():
+    for service, service_names in services.items():
         try:
             for i in range(num_configs):
-                config_service_name = f"{service_name}_{i+1}.service"
-                status_output = os.popen(f"systemctl is-active {config_service_name}").read().strip()
+                for service_name in service_names:
+                    config_service_name = f"{service_name}_{i+1}.service"
+                    status_output = os.popen(f"systemctl is-active {config_service_name}").read().strip()
 
-                if status_output == "active":
-                    status = "\033[92m✓ Active     \033[0m"
-                else:
-                    status = "\033[91m✘ Inactive   \033[0m"
-
-                if service == 'iran':
-                    display_name = '\033[93mIRAN Server   \033[0m'
-                elif service == 'kharej':
-                    display_name = '\033[93mKharej Service\033[0m'
-                else:
-                    display_name = service
-
-                print(f"           \033[93m ║\033[0m    {display_name} {i+1}:   |    {status:<10} \033[93m ║\033[0m")
+                    if status_output == "active":
+                        status = "\033[92m✓ Active     \033[0m"
+                        if service == 'iran':
+                            display_name = '\033[93mIRAN Server   \033[0m'
+                        elif service == 'kharej':
+                            display_name = '\033[93mKharej Service\033[0m'
+                        else:
+                            display_name = service
+                        print(f"           \033[93m ║\033[0m    {display_name} {i+1}:   |    {status:<10} \033[93m ║\033[0m")
 
         except OSError as e:
             print(f"Error in retrieving status for {service}: {e}")
@@ -3013,17 +3006,13 @@ def chisel4_status():
 
                 if status_output == "active":
                     status = "\033[92m✓ Active     \033[0m"
-                else:
-                    status = "\033[91m✘ Inactive   \033[0m"
-
-                if service == 'iran':
-                    display_name = '\033[93mIRAN Server   \033[0m'
-                elif service == 'kharej':
-                    display_name = '\033[93mKharej Service\033[0m'
-                else:
-                    display_name = service
-
-                print(f"           \033[93m ║\033[0m    {display_name} {i+1}:   |    {status:<10} \033[93m ║\033[0m")
+                    if service == 'iran':
+                        display_name = '\033[93mIRAN Server   \033[0m'
+                    elif service == 'kharej':
+                        display_name = '\033[93mKharej Service\033[0m'
+                    else:
+                        display_name = service
+                    print(f"           \033[93m ║\033[0m    {display_name} {i+1}:   |    {status:<10} \033[93m ║\033[0m")
 
         except OSError as e:
             print(f"Error in retrieving status for {service}: {e}")
@@ -3056,17 +3045,13 @@ def chisel1_status():
 
                 if status_output == "active":
                     status = "\033[92m✓ Active     \033[0m"
-                else:
-                    status = "\033[91m✘ Inactive   \033[0m"
-
-                if service == 'iran':
-                    display_name = '\033[93mIRAN Server   \033[0m'
-                elif service == 'kharej':
-                    display_name = '\033[93mKharej Service\033[0m'
-                else:
-                    display_name = service
-
-                print(f"           \033[93m ║\033[0m    {display_name} {i+1}:   |    {status:<10} \033[93m ║\033[0m")
+                    if service == 'iran':
+                        display_name = '\033[93mIRAN Server   \033[0m'
+                    elif service == 'kharej':
+                        display_name = '\033[93mKharej Service\033[0m'
+                    else:
+                        display_name = service
+                    print(f"           \033[93m ║\033[0m    {display_name} {i+1}:   |    {status:<10} \033[93m ║\033[0m")
 
         except OSError as e:
             print(f"Error in retrieving status for {service}: {e}")
@@ -3112,6 +3097,7 @@ def remove_chisel3():
     print("\033[93m───────────────────────────────────────\033[0m")
     delete_cron()
     delete_cron2()
+    print("\033[93m───────────────────────────────────────\033[0m")
 
     try:
         if subprocess.call("test -f /root/chisel", shell=True) == 0:
@@ -3158,6 +3144,7 @@ def remove_chisel():
     print("\033[93m───────────────────────────────────────\033[0m")
     delete_cron()
     delete_cron2()
+    print("\033[93m───────────────────────────────────────\033[0m")
 
     try:
         if subprocess.call("test -f /root/chisel", shell=True) == 0:

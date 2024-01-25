@@ -941,7 +941,7 @@ def chisel_key(key_path):
 def iran_tcp(host, key_path, port=443):
     service_name = "iran_1"
     service_file = f"/etc/systemd/system/{service_name}.service"
-    chisel_command = f"./chisel server --keyfile {key_path} --reverse --port {port} --host {host} --keepalive 25s"
+    chisel_command = f"./chisel server --keyfile {key_path} --reverse --port {port} --host {host} --keepalive 10s"
 
     service_content = f"""[Unit]
 Description=Chisel Service IRAN
@@ -1014,7 +1014,7 @@ def iran_ipv4():
 def kharej_tc(server_number, config_number, iran_ipv4, kharej_port, df_port=443):
     service_name = f"kharej_{server_number}_{config_number}"
     service_file = f"/etc/systemd/system/{service_name}.service"
-    chisel_command = f"./chisel client --keepalive 25s {iran_ipv4}:{df_port} R:localhost:{kharej_port}"
+    chisel_command = f"./chisel client --keepalive 10s {iran_ipv4}:{df_port} R:localhost:{kharej_port}"
 
     service_content = f"""[Unit]
 Description=Kharej Service {config_number} (Server {server_number})
@@ -1092,7 +1092,7 @@ def config_kharej():
 def kharej_tcp(config_number, iran_ipv4, kharej_port, tunnel_port=443):
     service_name = f"kharej_{config_number}"
     service_file = f"/etc/systemd/system/{service_name}.service"
-    chisel_command = f"./chisel client --keepalive 25s {iran_ipv4}:{tunnel_port} R:localhost:{kharej_port}"
+    chisel_command = f"./chisel client --keepalive 10s {iran_ipv4}:{tunnel_port} R:localhost:{kharej_port}"
 
     service_content = f"""[Unit]
 Description=Kharej Service {config_number}
@@ -1161,7 +1161,7 @@ def kharej_ipv4():
 def iran_tcp2(host, key_path, tunnel_port=443):
     service_name = "iran_1"
     service_file = f"/etc/systemd/system/{service_name}.service"
-    chisel_command = f"./chisel server --keyfile {key_path} --reverse --port {tunnel_port} --host [{host}] --keepalive 25s"
+    chisel_command = f"./chisel server --keyfile {key_path} --reverse --port {tunnel_port} --host [{host}] --keepalive 10s"
 
     service_content = f"""[Unit]
 Description=Chisel Service IRAN
@@ -1222,7 +1222,7 @@ def iran_ipv6():
 def kharej_tc2(config_number, server_number, iran_ipv6, kharej_port, tunnel_port=443):
     service_name = f"kharej_{server_number}_{config_number}"
     service_file = f"/etc/systemd/system/{service_name}.service"
-    chisel_command = f"./chisel client --keepalive 25s [{iran_ipv6}]:{tunnel_port} R:localhost:{kharej_port}"
+    chisel_command = f"./chisel client --keepalive 10s [{iran_ipv6}]:{tunnel_port} R:localhost:{kharej_port}"
 
     service_content = f"""[Unit]
 Description=Kharej Service {config_number} - Server {server_number}
@@ -1301,7 +1301,7 @@ def config_kharej6():
 def kharej_tcp2(config_number, iran_ipv6, kharej_port, tunnel_port=443):
     service_name = f"kharej_{config_number}"
     service_file = f"/etc/systemd/system/{service_name}.service"
-    chisel_command = f"./chisel client --keepalive 25s [{iran_ipv6}]:{tunnel_port} R:localhost:{kharej_port}"
+    chisel_command = f"./chisel client --keepalive 10s [{iran_ipv6}]:{tunnel_port} R:localhost:{kharej_port}"
 
     service_content = f"""[Unit]
 Description=Kharej Service {config_number}
@@ -1372,7 +1372,7 @@ def kharej_ipv6():
 def iran_udp(host, key_path, tunnel_port=443):
     service_name = "iran_1"
     service_file = f"/etc/systemd/system/{service_name}.service"
-    chisel_command = f"./chisel server --keyfile {key_path} --reverse --port {tunnel_port} --host {host} --keepalive 25s"
+    chisel_command = f"./chisel server --keyfile {key_path} --reverse --port {tunnel_port} --host {host} --keepalive 10s"
 
     service_content = f"""[Unit]
 Description=Chisel Service IRAN
@@ -1448,7 +1448,7 @@ def iran_ipv4_udp():
 def kharej_udp(config_number, iran_ipv4, kharej_port, tunnel_port=443):
     service_name = f"kharej_{config_number}"
     service_file = f"/etc/systemd/system/{service_name}.service"
-    chisel_command = f"./chisel client --keepalive 25s {iran_ipv4}:{tunnel_port} R:localhost:{kharej_port}/udp"
+    chisel_command = f"./chisel client --keepalive 10s {iran_ipv4}:{tunnel_port} R:localhost:{kharej_port}/udp"
 
     service_content = f"""[Unit]
 Description=Kharej Service {config_number}
@@ -1517,7 +1517,7 @@ def kharej_ipv4_udp():
 def kharej_ud6(config_number, server_number, iran_ipv6, kharej_port, tunnel_port):
     service_name = f"kharej_{server_number}_{config_number}"
     service_file = f"/etc/systemd/system/{service_name}.service"
-    chisel_command = f"./chisel client --keepalive 25s [{iran_ipv6}]:{tunnel_port} R:localhost:{kharej_port}/udp"
+    chisel_command = f"./chisel client --keepalive 10s [{iran_ipv6}]:{tunnel_port} R:localhost:{kharej_port}/udp"
 
     service_content = f"""[Unit]
 Description=Kharej Service {config_number} - Server {server_number}
@@ -1632,7 +1632,7 @@ def res_chisel3():
 def kharej_ud(config_number, server_number, iran_ipv4, kharej_port, tunnel_port=443):
     service_name = f"kharej_{server_number}_{config_number}"
     service_file = f"/etc/systemd/system/{service_name}.service"
-    chisel_command = f"./chisel client --keepalive 25s {iran_ipv4}:{tunnel_port} R:localhost:{kharej_port}/udp"
+    chisel_command = f"./chisel client --keepalive 10s {iran_ipv4}:{tunnel_port} R:localhost:{kharej_port}/udp"
 
     service_content = f"""[Unit]
 Description=Kharej Service {config_number} - Server {server_number}
@@ -1739,7 +1739,7 @@ def res_chisel2():
 def iran_udp2(host, key_path, tunnel_port=443):
     service_name = "iran_1"
     service_file = f"/etc/systemd/system/{service_name}.service"
-    chisel_command = f"./chisel server --keyfile {key_path} --reverse --port {tunnel_port} --host [{host}] --keepalive 25s"
+    chisel_command = f"./chisel server --keyfile {key_path} --reverse --port {tunnel_port} --host [{host}] --keepalive 10s"
 
     service_content = f"""[Unit]
 Description=Chisel Service IRAN
@@ -1843,7 +1843,7 @@ def res_chisel1():
 def kharej_udp2(config_number, iran_ipv4, iran_ipv6, kharej_port, tunnel_port=443):
     service_name = f"kharej_{config_number}"
     service_file = f"/etc/systemd/system/{service_name}.service"
-    chisel_command = f"./chisel client --keepalive 25s [{iran_ipv6}]:{tunnel_port} R:localhost:{kharej_port}/udp"
+    chisel_command = f"./chisel client --keepalive 10s [{iran_ipv6}]:{tunnel_port} R:localhost:{kharej_port}/udp"
 
     service_content = f"""[Unit]
 Description=Kharej Service {config_number}
@@ -2258,7 +2258,7 @@ done
 def iran_tcp3(key_path, tunnel_port=443):
     service_name = "iran_1"
     service_file = f"/etc/systemd/system/{service_name}.service"
-    chisel_command = f"./chisel server --keyfile {key_path} --reverse --port {tunnel_port} --host [fd1d:fc98:b63e:b481::2] --keepalive 25s"
+    chisel_command = f"./chisel server --keyfile {key_path} --reverse --port {tunnel_port} --host [fd1d:fc98:b63e:b481::2] --keepalive 10s"
 
     service_content = f"""[Unit]
 Description=Chisel Service IRAN
@@ -2337,7 +2337,7 @@ def irpri_ipv6():
 def khpri_tcp2(config_number, kharej_port, tunnel_port=443):
     service_name = f"kharej_{config_number}"
     service_file = f"/etc/systemd/system/{service_name}.service"
-    chisel_command = f"./chisel client --keepalive 25s [fd1d:fc98:b63e:b481::2]:{tunnel_port} R:localhost:{kharej_port}"
+    chisel_command = f"./chisel client --keepalive 10s [fd1d:fc98:b63e:b481::2]:{tunnel_port} R:localhost:{kharej_port}"
 
     service_content = f"""[Unit]
 Description=Kharej Service {config_number}
@@ -2414,7 +2414,7 @@ def khpri_ipv6():
 def iran_udp3(key_path, tunnel_port=443):
     service_name = "iran_1"
     service_file = "/etc/systemd/system/iran_1.service"
-    chisel_command = f"./chisel server --keyfile {key_path} --reverse --port {tunnel_port} --host [fd1d:fc98:b63e:b481::2] --keepalive 25s"
+    chisel_command = f"./chisel server --keyfile {key_path} --reverse --port {tunnel_port} --host [fd1d:fc98:b63e:b481::2] --keepalive 10s"
 
     service_content = f"""[Unit]
 Description=Chisel Service IRAN
@@ -2493,7 +2493,7 @@ def irpri_ipv6_udp():
 def kharej_udp3(config_number, kharej_port, tunnel_port=443):
     service_name = f"kharej_{config_number}"
     service_file = f"/etc/systemd/system/{service_name}.service"
-    chisel_command = f"./chisel client --keepalive 25s [fd1d:fc98:b63e:b481::2]:{tunnel_port} R:localhost:{kharej_port}/udp"
+    chisel_command = f"./chisel client --keepalive 10s [fd1d:fc98:b63e:b481::2]:{tunnel_port} R:localhost:{kharej_port}/udp"
 
     service_content = f"""[Unit]
 Description=Kharej Service {config_number}

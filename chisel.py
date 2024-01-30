@@ -1845,7 +1845,8 @@ def res_chisel3():
     with open("/etc/reschisel.sh", "w") as f:
         f.write("#!/bin/bash\n")
         f.write("systemctl daemon-reload\n")
-        f.write("sudo kill -9 $(pgrep chisel)\n")
+        f.write("pids=$(pgrep chisel)\n")
+        f.write("sudo kill -9 $pids\n")
         f.write("sudo journalctl --vacuum-size=1M\n")
         print("\033[93m────────────────────────\033[0m") 
         num_configs = int(input("\033[93mEnter\033[92m number of configs\033[93m[30 minutes Reset timer]:\033[0m "))
@@ -1958,7 +1959,8 @@ def res_chisel2():
     with open("/etc/reschisel.sh", "w") as f:
         f.write("#!/bin/bash\n")
         f.write("sudo systemctl daemon-reload\n")
-        f.write("sudo kill -9 $(pgrep chisel)\n")
+        f.write("pids=$(pgrep chisel)\n")
+        f.write("sudo kill -9 $pids\n")
         f.write("sudo systemctl restart iran_1\n")
         f.write("sudo journalctl --vacuum-size=1M\n")
 
@@ -2161,7 +2163,8 @@ def res_chisel1():
     with open("/etc/reschisel.sh", "w") as f:
         f.write("#!/bin/bash\n")
         f.write("systemctl daemon-reload\n")
-        f.write("sudo kill -9 $(pgrep chisel)\n")
+        f.write("pids=$(pgrep chisel)\n")
+        f.write("sudo kill -9 $pids\n")
         f.write("sudo journalctl --vacuum-size=1M\n")
         print("\033[93m────────────────────────\033[0m") 
         num_configs = int(input("\033[93mEnter\033[92m number of configs\033[93m[30 minutes Reset timer]:\033[0m "))

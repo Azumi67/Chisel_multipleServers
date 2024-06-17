@@ -1,4 +1,8 @@
 **این پروژه صرفا برای آموزش و بالا بردن دانش بوده است و هدف دیگری در ان نمیباشد**
+- برای اوبونتو از این دستور استفاده نمایید
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Azumi67/Chisel_multipleServers/main/chisel.sh)"
+```
 
 ![R (2)](https://github.com/Azumi67/PrivateIP-Tunnel/assets/119934376/a064577c-9302-4f43-b3bf-3d4f84245a6f)
 نام پروژه : ریورس تانل Chisel - برقراری تانل بین چندین سرور با ایپی 4 و ایپی 6 
@@ -967,6 +971,12 @@ wget "https://raw.githubusercontent.com/hawshemi/Linux-Optimizer/main/linux-opti
 ----------------
 
 - اسکریپت اصلی
+
+- برای ubuntu24 :
+```
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Azumi67/Chisel_multipleServers/main/chisel.sh)"
+```
+
 ```
 sudo apt-get install python3 -y && apt-get install wget -y && apt-get install python3-pip -y && pip3 install colorama && pip3 install netifaces && apt-get install curl -y && python3 <(curl -Ls https://raw.githubusercontent.com/Azumi67/Chisel_multipleServers/main/chisel.py --ipv4)
 ```

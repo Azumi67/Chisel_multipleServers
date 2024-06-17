@@ -971,7 +971,6 @@ wget "https://raw.githubusercontent.com/hawshemi/Linux-Optimizer/main/linux-opti
 ----------------
 
 - اسکریپت اصلی
-
 - برای ubuntu24 :
 ```
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Azumi67/Chisel_multipleServers/main/chisel.sh)"

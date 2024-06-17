@@ -1,5 +1,5 @@
 **این پروژه صرفا برای آموزش و بالا بردن دانش بوده است و هدف دیگری در ان نمیباشد**
-- برای اوبونتو از این دستور استفاده نمایید
+- برای ubuntu24 از این دستور استفاده نمایید
 ```
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Azumi67/Chisel_multipleServers/main/chisel.sh)"
 ```
